@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+*.env
+posted_log.json
+queue.json
+/tmp/
+*.jpg
+*.png

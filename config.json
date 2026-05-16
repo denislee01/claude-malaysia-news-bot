@@ -1,0 +1,42 @@
+{
+  "country": "Malaysia",
+  "account_handle": "@claudemalaysiaofficial",
+  "community_name": "Claude Malaysia",
+  "community_url": "claudemalaysia.com/join",
+  "flag_emoji": "🇲🇾",
+  "currency": "Ringgit (RM)",
+  "government_bodies": "NAIO, MDEC, MOSTI",
+  "local_landmarks": "KLCC, Putrajaya, Penang, Johor Bahru",
+  "local_context": "Malaysian founders, SMEs, and professionals",
+  "posting": {
+    "slides_count": 10,
+    "max_hashtags": 5,
+    "hashtags": ["#MalaysiaAI", "#ClaudeMalaysia", "#AINews", "#ArtificialIntelligence", "#Malaysia"]
+  },
+  "google_news_queries": [
+    "Malaysia AI artificial intelligence",
+    "Malaysia digital economy 2025",
+    "MDEC AI Malaysia",
+    "Kuala Lumpur tech startup AI",
+    "Malaysia data centre investment",
+    "artificial intelligence Southeast Asia Malaysia",
+    "Claude AI Malaysia",
+    "ChatGPT Malaysia business",
+    "Malaysia AI policy government",
+    "Malaysia automation workforce",
+    "generative AI Malaysia enterprise",
+    "Malaysia fintech AI banking",
+    "Malaysian startup funding AI",
+    "AI tools Malaysia SME",
+    "Malaysia smart city AI",
+    "Iskandar Malaysia AI investment",
+    "Malaysia AI healthcare",
+    "Malaysia education AI university",
+    "AI Malaysia jobs employment",
+    "NAIO Malaysia national AI office"
+  ],
+  "scrapers": {
+    "tech_in_asia": "https://www.techinasia.com/feed",
+    "e27": "https://e27.co/feed/"
+  }
+}
