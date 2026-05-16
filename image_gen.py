@@ -31,20 +31,20 @@ PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
 WIDTH, HEIGHT = 1080, 1350
 
 # Default search queries per slide position (used as fallback if no image_prompt)
-# Slides 1 and 10 try Singapore first, then fall back to neutral
+# Slides 1 and 10 try Malaysia first, then fall back to neutral
 # All other slides use neutral queries that won't accidentally show wrong-country imagery
 # Queries chosen for cinematic drama — bold, moody, visually striking on Instagram
 _DEFAULT_QUERIES = [
-    "Singapore Marina Bay night aerial",        # slide 1  cover  (SG-specific)
+    "Kuala Lumpur KLCC night aerial",           # slide 1  cover  (MY-specific)
     "server room blue glow technology dark",    # slide 2  WHAT HAPPENED
-    "Singapore skyline golden sunset dramatic", # slide 3  SG angle (SG-specific)
+    "Kuala Lumpur skyline golden sunset",       # slide 3  MY angle (MY-specific)
     "rain window city lights bokeh night",      # slide 4  THE NUMBER
     "silhouette dramatic spotlight empty stage",# slide 5  MOST PEOPLE DON'T KNOW
     "speaker stage spotlight crowd dark",       # slide 6  EXPERT TAKE
     "light trail highway night long exposure",  # slide 7  HOW WE GOT HERE
     "person laptop night window city view",     # slide 8  WHAT TO DO NOW
     "storm clouds lightning dramatic dark sky", # slide 9  WATCH OUT FOR
-    "Singapore skyline night community lights", # slide 10 CTA (SG-specific)
+    "Kuala Lumpur skyline night city lights",   # slide 10 CTA (MY-specific)
 ]
 
 # Neutral fallback queries used when SG-specific search returns no results
@@ -61,7 +61,7 @@ _NEUTRAL_FALLBACK_QUERIES = [
     "city skyline night dramatic lights",       # slide 10 fallback
 ]
 
-# Slides that are Singapore-specific and should try a neutral fallback if no SG results
+# Slides that are Malaysia-specific and should try a neutral fallback if no MY results
 _SG_SPECIFIC_SLIDE_INDICES = {0, 2, 9}
 
 
@@ -78,7 +78,7 @@ def _prompt_to_query(prompt: str, allow_singapore: bool = False) -> str:
         "with", "and", "the", "for", "a", "an", "in", "of", "at", "on",
         "9:16", "3:4", "full", "side", "view",
     }
-    # Strip country/place names unless this is a Singapore-specific slide
+    # Strip country/place names unless this is a Malaysia-specific slide
     location_words = {
         "singapore", "malaysia", "america", "american", "usa", "us",
         "china", "chinese", "india", "indian", "australia", "australian",
@@ -212,12 +212,12 @@ def generate_slide_images(carousel: dict, output_dir: str) -> list[str]:
     # Build query list from carousel prompts
     queries = []
 
-    # Slide 1 — cover (index 0, SG-specific → allow Singapore in query)
+    # Slide 1 — cover (index 0, MY-specific → allow Malaysia in query)
     cover_prompt = carousel.get("cover_image_prompt", "")
     queries.append(_prompt_to_query(cover_prompt, allow_singapore=True) if cover_prompt else _DEFAULT_QUERIES[0])
 
     # Slides 2–9 — inner
-    # Slide 3 is "THE SINGAPORE ANGLE" → index 2 in queries, allow Singapore
+    # Slide 3 is "THE MALAYSIA ANGLE" → index 2 in queries, allow Malaysia
     for i, slide in enumerate(carousel.get("slides", [])):
         prompt = slide.get("image_prompt", "")
         query_idx = i + 1  # query index (0=cover, 1=slide2, 2=slide3, ...)
@@ -227,7 +227,7 @@ def generate_slide_images(carousel: dict, output_dir: str) -> list[str]:
             else _DEFAULT_QUERIES[min(i + 1, 8)]
         )
 
-    # Slide 10 — CTA (index 9, SG-specific)
+    # Slide 10 — CTA (index 9, MY-specific)
     queries.append(_DEFAULT_QUERIES[9])
 
     # Pad / trim to exactly 10

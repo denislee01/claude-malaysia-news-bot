@@ -12,7 +12,7 @@ APIFY_KEY = os.environ.get("APIFY_API_KEY", "")
 AI_KEYWORDS = [
     "ai", "llm", "gpt", "claude", "gemini", "anthropic", "openai", "machine learning",
     "deep learning", "neural", "transformer", "diffusion", "chatbot", "model", "inference",
-    "agent", "rag", "fine-tun", "singapore", "imda", "aisg", "smart nation", "data centre", "data center",
+    "agent", "rag", "fine-tun", "malaysia", "mdec", "naio", "mosti", "data centre", "data center",
 ]
 
 def _is_ai_relevant(text: str) -> bool:
@@ -102,7 +102,7 @@ def fetch_reddit(subreddits: list[str] = None, min_score: int = 60) -> list[dict
                 title = p.get("title", "")
                 if score < min_score:
                     continue
-                if sub not in ("singapore",) and not _is_ai_relevant(title):
+                if sub not in ("malaysia",) and not _is_ai_relevant(title):
                     continue
                 created = datetime.fromtimestamp(p.get("created_utc", 0), tz=timezone.utc)
                 if created < cutoff:
@@ -116,7 +116,7 @@ def fetch_reddit(subreddits: list[str] = None, min_score: int = 60) -> list[dict
                     "url": link,
                     "source": sub,
                     "published_at": created.isoformat(),
-                    "category": "singapore_local" if sub == "singapore" else "global_ai",
+                    "category": "malaysia_local" if sub == "malaysia" else "global_ai",
                     "hn_score": 0,
                     "reddit_score": score,
                     "reddit_comments": p.get("num_comments", 0),
@@ -296,10 +296,10 @@ def enrich_with_text(stories: list[dict]) -> list[dict]:
 
 
 def _categorise(query: str) -> str:
-    singapore_keywords = ["singapore", "imda", "aisg", "edb", "mas", "smart+nation", "changi", "jurong"]
+    malaysia_keywords = ["malaysia", "mdec", "naio", "mosti", "klcc", "putrajaya", "penang", "johor"]
     q = query.lower()
-    if any(k in q for k in singapore_keywords):
-        return "singapore_local"
+    if any(k in q for k in malaysia_keywords):
+        return "malaysia_local"
     return "global_ai"
 
 
@@ -336,7 +336,7 @@ def run() -> list[dict]:
 
     # Tier 3 — Reddit hot AI subs
     all_stories.extend(fetch_reddit(
-        subreddits=["MachineLearning", "LocalLLaMA", "artificial", "singapore"],
+        subreddits=["MachineLearning", "LocalLLaMA", "artificial", "malaysia"],
         min_score=60
     ))
 

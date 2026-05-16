@@ -9,10 +9,10 @@ from pathlib import Path
 _cfg_path = Path(__file__).parent / "config.json"
 with open(_cfg_path) as f:
     _CFG = json.load(f)
-ACCOUNT_HANDLE = _CFG.get("account_handle", "@claudesingaporeofficial")
-COMMUNITY_URL  = _CFG.get("community_url", "claudesingapore.com/join")
-COMMUNITY_NAME = _CFG.get("community_name", "Claude Singapore")
-FLAG_EMOJI     = _CFG.get("flag_emoji", "🇸🇬")
+ACCOUNT_HANDLE = _CFG.get("account_handle", "@claudemalaysiaofficial")
+COMMUNITY_URL  = _CFG.get("community_url", "claudemalaysia.com/join")
+COMMUNITY_NAME = _CFG.get("community_name", "Claude Malaysia")
+FLAG_EMOJI     = _CFG.get("flag_emoji", "🇲🇾")
 
 SLIDE_W = 1080
 SLIDE_H = 1350

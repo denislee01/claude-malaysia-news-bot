@@ -99,7 +99,7 @@ Writing rules — study these carefully:
 - Write like a smart friend explaining news over WhatsApp. Not a journalist. Not a presenter.
 - Cover headline: Use Title Case (not ALLCAPS). Include a SPECIFIC number or name if the story has one. Max 10 words per line, 2-3 lines. Make someone stop scrolling.
   GOOD: "Someone Built a $32 Device That Shows Your AI Usage in Real Time"
-  GOOD: "Singapore Just Secured a $10 Billion AI Deal Nobody Saw Coming"
+  GOOD: "Malaysia Just Secured a $10 Billion AI Deal Nobody Saw Coming"
   BAD: "WHAT THIS MEANS FOR SINGAPORE'S AI FUTURE"
 - Every slide headline must be a specific, conversational statement — not a generic label.
   GOOD: "Google just offered SpaceX $1.5 billion to launch satellites into orbit"
@@ -119,7 +119,7 @@ Return valid JSON only:
   "cover_formula": 3,
   "cover_headline": "Someone Built a $32 Device\\nThat Shows Your Claude Code\\nUsage in Real Time",
   "cover_subheadline": "AI usage tracking just went physical. And it only costs $32.",
-  "caption": "A $32 gadget is now more useful than most $2,000 AI dashboards.\\n\\nHere's what it does — and why developers in {COUNTRY} are already copying it.\\n\\nSwipe to see the full breakdown ➡️\\n\\nComment \\"CLAUDE\\" to join {COMMUNITY_NAME} {FLAG_EMOJI}\\n→ {COMMUNITY_URL}\\n\\n#ai #singapore #claudeai #aitools #technews",
+  "caption": "A $32 gadget is now more useful than most $2,000 AI dashboards.\\n\\nHere's what it does — and why developers in {COUNTRY} are already copying it.\\n\\nSwipe to see the full breakdown ➡️\\n\\nComment \\"CLAUDE\\" to join {COMMUNITY_NAME} {FLAG_EMOJI}\\n→ {COMMUNITY_URL}\\n\\n#ai #malaysia #claudeai #aitools #technews",
   "cover_image_prompt": "Choose the most visually BOLD and dramatic scene that matches the story topic. Use real-world photographic subjects: dramatic aerial city night lights, storm clouds over skyline, neon-lit streets, lone figure in vast tech landscape, server room blue glow, satellite view of city grid. NEVER logos, NEVER flat graphics, NEVER corporate illustrations. Dark and cinematic. No text. Portrait.",
   "slides": [
     {{
@@ -136,7 +136,7 @@ Return valid JSON only:
       "headline": "Write how this directly affects someone living and working in {COUNTRY}",
       "amber_line": "**The most direct impact on {COUNTRY} professionals or businesses — with a number if possible.**",
       "body": "3 short sentences. Name real {COUNTRY} companies, sectors ({GOV_BODIES}), or use {CURRENCY} amounts. Be specific.",
-      "image_prompt": "Singapore city skyline or relevant local scene, dark moody, no text"
+      "image_prompt": "Kuala Lumpur city skyline or relevant local scene, dark moody, no text"
     }},
     {{
       "num": 4,
@@ -277,9 +277,9 @@ def run(stories: list[dict], posted_urls: set) -> tuple[dict, dict]:
 
     scored = score_stories(fresh)
 
-    # Pick best Singapore local + best global as primary picks
-    local = next((s for s in scored if s.get("category") == "singapore_local"), None)
-    global_ = next((s for s in scored if s.get("category") != "singapore_local"), None)
+    # Pick best Malaysia local + best global as primary picks
+    local = next((s for s in scored if s.get("category") == "malaysia_local"), None)
+    global_ = next((s for s in scored if s.get("category") != "malaysia_local"), None)
 
     picks = [s for s in [local, global_] if s][:2]
     if not picks:
