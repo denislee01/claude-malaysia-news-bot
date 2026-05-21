@@ -34,8 +34,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
-          BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
-          BLOTATO_ACCOUNT_ID: ${{ secrets.BLOTATO_ACCOUNT_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
 
       - name: Commit posted_urls.json
