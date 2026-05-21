@@ -2,8 +2,8 @@ name: Malaysia AI News Carousel
 
 on:
   schedule:
-    - cron: '0 22 * * *'   # 6:00am MYT (UTC+8) — Morning post
-    - cron: '0 2 * * *'    # 10:00am MYT          — Late morning post
+    - cron: '0 0 * * *'    # 8:00am MYT (UTC+8)  — Morning post
+    - cron: '30 10 * * *'  # 6:30pm MYT           — Evening post
   workflow_dispatch:         # Manual trigger from GitHub UI
 
 permissions:
