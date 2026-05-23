@@ -4,7 +4,12 @@ on:
   schedule:
     - cron: '0 0 * * *'    # 8:00am MYT (UTC+8)  — Morning post
     - cron: '30 10 * * *'  # 6:30pm MYT           — Evening post
-  workflow_dispatch:         # Manual trigger from GitHub UI
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run — build slides and save artifacts but skip Instagram post'
+        type: boolean
+        default: false
 
 permissions:
   contents: write            # Allows committing posted_urls.json back to repo
@@ -30,7 +35,7 @@ jobs:
           playwright install chromium --with-deps
 
       - name: Run pipeline
-        run: python pipeline.py
+        run: python pipeline.py ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
@@ -39,6 +44,7 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
 
       - name: Commit posted_urls.json
+        if: ${{ github.event.inputs.dry_run != 'true' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
