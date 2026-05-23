@@ -220,8 +220,8 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     display:block; flex-shrink:0;
   }}
   .inner-h2 {{
-    font-size:26px; font-weight:800; color:var(--text);
-    line-height:1.20; letter-spacing:-.5px; margin-bottom:18px;
+    font-size:30px; font-weight:800; color:var(--text);
+    line-height:1.18; letter-spacing:-.5px; margin-bottom:18px;
   }}
   .callout {{
     border-left:2px solid var(--acc);

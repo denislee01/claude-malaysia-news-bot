@@ -107,10 +107,10 @@ Writing rules — study these carefully:
 - Amber line: the single most jaw-dropping stat or fact. Put the NUMBER in it if there is one.
   GOOD: **"This model runs 48x faster than GPT-4 — on a single laptop GPU."**
   BAD: **"This is a major development for the AI industry."**
-- Body text: max 3 sentences. Each sentence = 1 idea. No corporate speak. No "it is worth noting".
+- Body text: MAX 2 short sentences. Each sentence is one punchy idea — treat it like a tweet. No corporate speak. No "it is worth noting".
 - Slide 3 MUST localise to {COUNTRY}. Name real companies, government bodies ({GOV_BODIES}), or professionals affected.
 - Caption: Start with a provocative 1-line hook. Then 2-3 short lines expanding it. End with Comment CLAUDE.
-- Slide 10 always: comment CLAUDE → {COMMUNITY_URL}.
+- Write EXACTLY 8 slides (num 2 through 9). Do NOT write a slide 10 — the CTA is generated automatically.
 
 Return valid JSON only:
 {{
