@@ -64,8 +64,6 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     for i, slide in enumerate(carousel.get("slides", [])):
         idx     = i + 1
         img_b64 = _img_to_b64(image_paths[idx]) if idx < len(image_paths) else ""
-        callout = _accent_line(slide.get("amber_line", ""))
-        body    = _accent_line(slide.get("body", ""))
         num     = slide.get("num", i + 2)
         pct     = int((num / 10) * 100)
         slides_html.append(f"""
@@ -78,8 +76,7 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
         <div class="inner-body">
           <div class="label">{slide.get('label', '')}</div>
           <h2 class="inner-h2">{slide.get('headline', '')}</h2>
-          <div class="callout">{callout}</div>
-          <p class="body-text">{body}</p>
+          <p class="insight">{slide.get('insight', '')}</p>
         </div>
       </div>
       <div class="arr">›</div>
@@ -270,16 +267,15 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     display:block; flex-shrink:0;
   }}
   .inner-h2 {{
-    font-size:30px; font-weight:800; color:var(--text);
-    line-height:1.18; letter-spacing:-.5px; margin-bottom:18px;
+    font-size:34px; font-weight:800; color:var(--text);
+    line-height:1.14; letter-spacing:-.5px; margin-bottom:22px;
   }}
-  .callout {{
-    border-left:2px solid var(--acc);
-    padding:4px 0 4px 14px; margin-bottom:16px;
-    font-size:14px; font-weight:600; color:var(--text); line-height:1.55;
+  .insight {{
+    font-size:15px; font-weight:500; color:var(--dim);
+    line-height:1.58; border-left:2px solid var(--acc);
+    padding-left:14px;
   }}
   .acc {{ color:var(--acc); }}
-  .body-text {{ font-size:13px; color:var(--dim); line-height:1.72; }}
   .arr {{
     position:absolute; right:18px; bottom:22px; z-index:5;
     font-size:20px; color:var(--acc); opacity:.55; line-height:1;

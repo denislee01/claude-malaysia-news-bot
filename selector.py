@@ -107,7 +107,7 @@ Writing rules — study these carefully:
 - Amber line: the single most jaw-dropping stat or fact. Put the NUMBER in it if there is one.
   GOOD: **"This model runs 48x faster than GPT-4 — on a single laptop GPU."**
   BAD: **"This is a major development for the AI industry."**
-- Body text: MAX 2 short sentences. Each sentence is one punchy idea — treat it like a tweet. No corporate speak. No "it is worth noting".
+- insight: ONE sentence only. Max 12 words. The single most surprising fact or takeaway. No corporate speak. Numbers preferred.
 - Slide 3 MUST localise to {COUNTRY}. Name real companies, government bodies ({GOV_BODIES}), or professionals affected.
 - Caption: Start with a provocative 1-line hook. Then 2-3 short lines expanding it. End with Comment CLAUDE.
 - Write EXACTLY 8 slides (num 2 through 9). Do NOT write a slide 10 — the CTA is generated automatically.
@@ -130,8 +130,7 @@ Return valid JSON only:
       "num": 2,
       "label": "WHAT HAPPENED",
       "headline": "Write a specific 8-10 word headline describing the actual news event",
-      "amber_line": "**Include the most shocking specific number or fact from this story.**",
-      "body": "3 short sentences max. What happened, who did it, why it matters. Write like texting a friend.",
+      "insight": "One sentence, max 12 words. The most surprising fact or number from this story.",
       "image_prompt": "Dark tech concept relevant to the story, no text, portrait"
     }},
     {{
@@ -278,6 +277,18 @@ def run(stories: list[dict], posted_urls: set) -> tuple[dict, dict]:
     # Filter already posted
     fresh = [s for s in stories if s["url"] not in posted_urls]
     print(f"[selector] {len(fresh)} fresh stories to score (removed {len(stories)-len(fresh)} already posted)")
+
+    # Block content irrelevant to Malaysian audience
+    _blocklist = [
+        "anna's archive", "anna archive", "sci-hub", "libgen",
+        "piracy", "torrent", "warez", "jailbreak iphone",
+        "us politics", "trump", "congress", "senate bill",
+        "nfl", "nba", "premier league", "cricket",
+    ]
+    before = len(fresh)
+    fresh = [s for s in fresh if not any(kw in s.get("headline", "").lower() for kw in _blocklist)]
+    if len(fresh) < before:
+        print(f"[selector] Blocked {before - len(fresh)} irrelevant stories")
 
     scored = score_stories(fresh)
 
