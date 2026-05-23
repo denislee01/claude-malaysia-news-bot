@@ -13,6 +13,9 @@ COMMUNITY_URL  = _CFG.get("community_url", "claudemalaysia.com/join")
 COMMUNITY_NAME = _CFG.get("community_name", "Claude Malaysia")
 FLAG_EMOJI     = _CFG.get("flag_emoji", "🇲🇾")
 
+# Official Claude Malaysia logo
+_LOGO_PATH = Path(__file__).parent / "logo.jpg"
+
 SLIDE_W    = 1080
 SLIDE_H    = 1350
 VIEWPORT_W = 540
@@ -35,6 +38,10 @@ _amber_line = _accent_line
 def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     slides_html = []
 
+    # Load logo
+    logo_b64 = _img_to_b64(str(_LOGO_PATH)) if _LOGO_PATH.exists() else ""
+    logo_html = f'<div class="logo-sticker"><img src="data:image/jpeg;base64,{logo_b64}" alt="CM"></div>' if logo_b64 else ""
+
     # ── Slide 1: Cover ──────────────────────────────────────────────────────
     cover_b64  = _img_to_b64(image_paths[0]) if image_paths else ""
     meme_text  = carousel.get("meme_text", "")
@@ -46,7 +53,7 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
       <div class="cover-photo" style="background-image:url('data:image/jpeg;base64,{cover_b64}')"></div>
       <div class="cover-scrim"></div>
       <div class="top-line"></div>
-      <div class="cover-sticker">{FLAG_EMOJI}<br><span class="sticker-label">CM</span></div>
+      {logo_html}
       <span class="cover-handle">{ACCOUNT_HANDLE}</span>
       {meme_html}
       <div class="cover-bottom">
@@ -68,16 +75,15 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
         pct     = int((num / 10) * 100)
         slides_html.append(f"""
     <div class="slide inner-slide">
-      <div class="photo photo-dim" style="background-image:url('data:image/jpeg;base64,{img_b64}')"></div>
+      <div class="inner-photo" style="background-image:url('data:image/jpeg;base64,{img_b64}')"></div>
+      <div class="inner-scrim"></div>
       <div class="top-line"></div>
       <div class="slide-num">{num:02d}<span class="num-total"> /10</span></div>
-      <div class="inner-layout">
-        <span class="handle">{ACCOUNT_HANDLE}</span>
-        <div class="inner-body">
-          <div class="label">{slide.get('label', '')}</div>
-          <h2 class="inner-h2">{slide.get('headline', '')}</h2>
-          <p class="insight">{slide.get('insight', '')}</p>
-        </div>
+      <span class="inner-handle">{ACCOUNT_HANDLE}</span>
+      <div class="inner-bottom">
+        <div class="label">{slide.get('label', '')}</div>
+        <h2 class="inner-h2">{slide.get('headline', '')}</h2>
+        <p class="insight">{slide.get('insight', '')}</p>
       </div>
       <div class="arr">›</div>
       <div class="prog-track"><div class="prog-fill" style="width:{pct}%"></div></div>
@@ -87,13 +93,13 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     cta_b64 = _img_to_b64(image_paths[-1]) if len(image_paths) >= 10 else ""
     slides_html.append(f"""
     <div class="slide cta-slide">
-      <div class="photo" style="background-image:url('data:image/jpeg;base64,{cta_b64}')"></div>
-      <div class="cta-scrim"></div>
+      <div class="cover-photo" style="background-image:url('data:image/jpeg;base64,{cta_b64}')"></div>
+      <div class="cover-scrim"></div>
       <div class="top-line"></div>
+      {logo_html}
       <div class="cta-inner">
-        <span class="handle">{ACCOUNT_HANDLE}</span>
+        <span class="cover-handle">{ACCOUNT_HANDLE}</span>
         <div class="cta-body">
-          <div class="cta-flag">{FLAG_EMOJI}</div>
           <h2 class="cta-h2">WANT MORE<br>STORIES LIKE THIS?</h2>
           <div class="cta-btn">Comment <span class="acc">CLAUDE</span></div>
           <p class="cta-desc">Join the {COMMUNITY_NAME} community<br>Get AI news straight to your DMs</p>
@@ -107,7 +113,7 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
 <html>
 <head>
 <meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 <style>
   * {{ margin:0; padding:0; box-sizing:border-box; }}
   body {{ background:#000; font-family:'Inter',system-ui,sans-serif; overflow:hidden; }}
@@ -116,8 +122,8 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     --bg:    #090909;
     --acc:   #C8714A;
     --text:  #F0EDE8;
-    --dim:   rgba(240,237,232,0.52);
-    --muted: rgba(240,237,232,0.22);
+    --dim:   rgba(240,237,232,0.65);
+    --muted: rgba(240,237,232,0.28);
     --border:rgba(240,237,232,0.07);
   }}
 
@@ -130,13 +136,6 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     background:var(--bg); position:relative; overflow:hidden;
   }}
 
-  /* Shared photo layer (inner + CTA at low opacity) */
-  .photo {{
-    position:absolute; inset:0; z-index:1;
-    background-size:cover; background-position:center; opacity:.07;
-  }}
-  .photo-dim {{ opacity:.04; }}
-
   /* Orange top rule */
   .top-line {{
     position:absolute; top:0; left:0; right:0; height:1.5px;
@@ -145,18 +144,24 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
 
   /* Progress bar */
   .prog-track {{
-    position:absolute; bottom:0; left:0; right:0; height:1.5px;
+    position:absolute; bottom:0; left:0; right:0; height:2px;
     background:var(--border); z-index:10;
   }}
   .prog-fill {{ height:100%; background:var(--acc); }}
 
-  /* ── Cover ──────────────────────────────────────────────────────────── */
+  /* Logo sticker — top left */
+  .logo-sticker {{
+    position:absolute; top:16px; left:18px; z-index:8;
+    width:52px; height:52px; border-radius:50%; overflow:hidden;
+    box-shadow:0 2px 12px rgba(0,0,0,.5);
+  }}
+  .logo-sticker img {{ width:100%; height:100%; object-fit:cover; }}
+
+  /* ── Cover & CTA (shared photo+scrim pattern) ───────────────────── */
   .cover-photo {{
     position:absolute; inset:0; z-index:1;
-    background-size:cover; background-position:center top;
-    opacity:1;
+    background-size:cover; background-position:center top; opacity:1;
   }}
-  /* Strong bottom scrim — photo visible top half, dark bottom half */
   .cover-scrim {{
     position:absolute; inset:0; z-index:2;
     background: linear-gradient(to top,
@@ -166,26 +171,13 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
       rgba(0,0,0,.04) 72%,
       transparent 100%);
   }}
-  /* Claude Malaysia circle sticker — top left */
-  .cover-sticker {{
-    position:absolute; top:18px; left:20px; z-index:6;
-    width:54px; height:54px; border-radius:50%;
-    background:var(--acc);
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    font-size:16px; line-height:1; color:#fff;
-  }}
-  .sticker-label {{
-    font-size:9px; font-weight:900; letter-spacing:.5px; line-height:1.2;
-  }}
-  /* Account handle — top right */
   .cover-handle {{
-    position:absolute; top:22px; right:20px; z-index:6;
+    position:absolute; top:22px; right:20px; z-index:8;
     font-size:9px; color:rgba(255,255,255,.25); letter-spacing:1px;
     text-transform:lowercase;
   }}
-  /* Meme chat bubble overlay */
   .meme-bubble {{
-    position:absolute; top:86px; left:18px; z-index:6;
+    position:absolute; top:86px; left:18px; z-index:8;
     max-width:75%;
     background:rgba(22,22,22,.94);
     border-radius:4px 18px 18px 18px;
@@ -196,13 +188,11 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     box-shadow:0 4px 28px rgba(0,0,0,.65);
     border:1px solid rgba(255,255,255,.07);
   }}
-  /* Bottom content zone */
   .cover-bottom {{
     position:absolute; bottom:0; left:0; right:0; z-index:5;
     padding:0 22px 26px;
     display:flex; flex-direction:column; align-items:center;
   }}
-  /* "— CLAUDE MALAYSIA —" source tag */
   .cover-source {{
     font-size:9px; font-weight:700; letter-spacing:3px;
     color:rgba(255,255,255,.40); text-transform:uppercase;
@@ -210,12 +200,10 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     justify-content:center; margin-bottom:10px;
   }}
   .src-line {{ flex:1; max-width:44px; height:1px; background:rgba(255,255,255,.25); }}
-  /* Category badge */
   .cover-badge {{
     font-size:11px; font-weight:700; letter-spacing:1.5px;
     color:var(--acc); text-transform:uppercase; margin-bottom:10px;
   }}
-  /* Massive headline */
   .cover-h1 {{
     font-size:36px; font-weight:900; color:#fff;
     line-height:1.07; text-transform:uppercase; letter-spacing:-.3px;
@@ -223,7 +211,7 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     text-shadow:0 2px 24px rgba(0,0,0,.5);
   }}
   .cover-sub {{
-    font-size:12px; font-weight:600; color:rgba(255,255,255,.62);
+    font-size:12px; font-weight:600; color:rgba(255,255,255,.60);
     text-align:center; margin-bottom:14px; max-width:92%;
   }}
   .swipe-hint {{
@@ -234,73 +222,77 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
   .dot {{ width:5px; height:5px; border-radius:50%; background:rgba(240,237,232,.15); }}
   .dot.on {{ background:var(--acc); width:18px; border-radius:2px; }}
 
-  /* ── Inner Slides ─────────────────────────────────────────────────── */
-  /* Dot grid */
-  .inner-slide::after {{
-    content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
-    background-image:radial-gradient(circle,rgba(240,237,232,.04) 1px,transparent 1px);
-    background-size:24px 24px;
+  /* ── Inner Slides ─────────────────────────────────────────────── */
+  /* Full-bleed photo — fully visible */
+  .inner-photo {{
+    position:absolute; inset:0; z-index:1;
+    background-size:cover; background-position:center; opacity:1;
+  }}
+  /* Gradient: transparent top → dark bottom (text zone ~40%) */
+  .inner-scrim {{
+    position:absolute; inset:0; z-index:2;
+    background: linear-gradient(to top,
+      rgba(0,0,0,.97) 0%,
+      rgba(0,0,0,.93) 32%,
+      rgba(0,0,0,.45) 56%,
+      rgba(0,0,0,.06) 74%,
+      transparent 100%);
   }}
   .slide-num {{
-    position:absolute; top:16px; right:22px; z-index:5;
-    font-size:11px; color:var(--muted); letter-spacing:.5px;
+    position:absolute; top:16px; right:20px; z-index:6;
+    font-size:11px; color:rgba(255,255,255,.35); letter-spacing:.5px;
     font-variant-numeric:tabular-nums;
   }}
-  .num-total {{ opacity:.45; font-size:10px; }}
-  .handle {{
-    font-size:9px; color:var(--muted); letter-spacing:1px; text-transform:lowercase;
+  .num-total {{ opacity:.5; font-size:10px; }}
+  .inner-handle {{
+    position:absolute; top:20px; left:20px; z-index:6;
+    font-size:9px; color:rgba(255,255,255,.25); letter-spacing:1px;
+    text-transform:lowercase;
   }}
-  .inner-layout {{
-    position:relative; z-index:4; height:100%;
-    padding:20px 28px 24px; display:flex; flex-direction:column;
-  }}
-  .inner-body {{
-    flex:1; display:flex; flex-direction:column; justify-content:center;
-    padding-bottom:18px;
+  /* Text anchored to bottom */
+  .inner-bottom {{
+    position:absolute; bottom:0; left:0; right:0; z-index:5;
+    padding:0 24px 28px;
   }}
   .label {{
     font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase;
-    color:var(--acc); display:flex; align-items:center; gap:8px; margin-bottom:16px;
+    color:var(--acc); display:flex; align-items:center; gap:8px; margin-bottom:12px;
   }}
   .label::before {{
     content:''; width:14px; height:1.5px; background:var(--acc);
     display:block; flex-shrink:0;
   }}
   .inner-h2 {{
-    font-size:34px; font-weight:800; color:var(--text);
-    line-height:1.14; letter-spacing:-.5px; margin-bottom:22px;
+    font-size:32px; font-weight:800; color:#fff;
+    line-height:1.14; letter-spacing:-.4px; margin-bottom:12px;
+    text-shadow:0 2px 16px rgba(0,0,0,.6);
   }}
   .insight {{
-    font-size:15px; font-weight:500; color:var(--dim);
-    line-height:1.58; border-left:2px solid var(--acc);
-    padding-left:14px;
+    font-size:14px; font-weight:500; color:var(--dim); line-height:1.55;
   }}
   .acc {{ color:var(--acc); }}
   .arr {{
-    position:absolute; right:18px; bottom:22px; z-index:5;
-    font-size:20px; color:var(--acc); opacity:.55; line-height:1;
+    position:absolute; right:18px; bottom:22px; z-index:6;
+    font-size:20px; color:var(--acc); opacity:.6; line-height:1;
   }}
 
-  /* ── CTA Slide ────────────────────────────────────────────────────── */
-  .cta-scrim {{
-    position:absolute; inset:0; z-index:2;
-    background:radial-gradient(ellipse at 50% 85%,rgba(200,113,74,.18) 0%,transparent 60%);
-  }}
+  /* ── CTA ──────────────────────────────────────────────────────── */
   .cta-inner {{
-    position:relative; z-index:4; height:100%;
-    padding:22px 28px 28px; display:flex; flex-direction:column;
+    position:relative; z-index:5; height:100%;
+    padding:18px 24px 28px;
+    display:flex; flex-direction:column;
   }}
   .cta-body {{
     flex:1; display:flex; flex-direction:column;
     align-items:center; justify-content:center; text-align:center;
   }}
-  .cta-flag   {{ font-size:26px; margin-bottom:16px; }}
-  .cta-h2     {{ font-size:26px; font-weight:800; color:var(--text);
-                 line-height:1.18; letter-spacing:-.5px; margin-bottom:22px; }}
-  .cta-btn    {{ font-size:13px; font-weight:700; color:var(--text);
-                 border:1.5px solid var(--acc); padding:10px 28px;
+  .cta-h2     {{ font-size:28px; font-weight:900; color:#fff;
+                 line-height:1.14; letter-spacing:-.4px; margin-bottom:22px;
+                 text-shadow:0 2px 20px rgba(0,0,0,.5); }}
+  .cta-btn    {{ font-size:13px; font-weight:700; color:#fff;
+                 border:1.5px solid var(--acc); padding:11px 30px;
                  border-radius:30px; margin-bottom:20px; letter-spacing:.3px; }}
-  .cta-desc   {{ font-size:12px; color:var(--dim); line-height:1.65; margin-bottom:14px; }}
+  .cta-desc   {{ font-size:12px; color:rgba(255,255,255,.60); line-height:1.65; margin-bottom:14px; }}
   .cta-url    {{ font-size:11px; font-weight:700; color:var(--acc); letter-spacing:.8px; }}
 </style>
 </head>
