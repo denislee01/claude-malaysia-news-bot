@@ -204,7 +204,7 @@ def _gradient_fallback(path: str, slide_index: int):
     img.save(path, "JPEG", quality=92)
 
 
-def generate_slide_images(carousel: dict, output_dir: str) -> list[str]:
+def generate_slide_images(carousel: dict, output_dir: str, og_image_url: str = "") -> list[str]:
     """Fetch 10 Pexels photos (or gradient fallback) for the carousel slides."""
     Path(output_dir).mkdir(parents=True, exist_ok=True)
     paths = []
@@ -238,11 +238,19 @@ def generate_slide_images(carousel: dict, output_dir: str) -> list[str]:
     for i, query in enumerate(queries):
         path = os.path.join(output_dir, f"slide_{i+1:02d}.jpg")
 
-        # All slides — Pexels only. Article og:images (logos, brand graphics,
-        # flat screenshots) are not bold or cinematic enough for Instagram covers.
-        # Claude's cover_image_prompt already generates dramatic scene descriptions.
-        neutral_fallback = _NEUTRAL_FALLBACK_QUERIES[i] if i in _SG_SPECIFIC_SLIDE_INDICES else None
-        img_bytes = _fetch_pexels(query, slide_index=i, fallback_query=neutral_fallback)
+        img_bytes = None
+        # Cover slide (index 0): try article og:image first — gives us real CEO/person photos
+        if i == 0 and og_image_url:
+            print(f"[image_gen] Trying article og:image for cover: {og_image_url[:60]}...")
+            img_bytes = _fetch_url_image(og_image_url)
+            if img_bytes:
+                print("[image_gen] og:image used for cover slide ✓")
+            else:
+                print("[image_gen] og:image failed — falling back to Pexels")
+
+        if img_bytes is None:
+            neutral_fallback = _NEUTRAL_FALLBACK_QUERIES[i] if i in _SG_SPECIFIC_SLIDE_INDICES else None
+            img_bytes = _fetch_pexels(query, slide_index=i, fallback_query=neutral_fallback)
         if img_bytes:
             _crop_and_resize(img_bytes, path)
         else:

@@ -29,40 +29,45 @@ def _accent_line(text: str) -> str:
     import re
     return re.sub(r"\*\*(.*?)\*\*", r'<span class="acc">\1</span>', text)
 
-_amber_line = _accent_line  # backward-compat
+_amber_line = _accent_line
 
 
 def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     slides_html = []
 
     # ── Slide 1: Cover ──────────────────────────────────────────────────────
-    cover_b64 = _img_to_b64(image_paths[0]) if image_paths else ""
+    cover_b64  = _img_to_b64(image_paths[0]) if image_paths else ""
+    meme_text  = carousel.get("meme_text", "")
+    badge      = carousel.get("cover_badge", "AI NEWS")
+    meme_html  = f'<div class="meme-bubble">{meme_text}</div>' if meme_text else ""
+
     slides_html.append(f"""
     <div class="slide cover-slide">
-      <div class="photo" style="background-image:url('data:image/jpeg;base64,{cover_b64}')"></div>
-      <div class="cover-glow"></div>
+      <div class="cover-photo" style="background-image:url('data:image/jpeg;base64,{cover_b64}')"></div>
+      <div class="cover-scrim"></div>
       <div class="top-line"></div>
-      <div class="cover-inner">
-        <span class="handle">{ACCOUNT_HANDLE}</span>
-        <div class="cover-body">
-          <div class="cover-tag"><span class="tag-dash"></span>{FLAG_EMOJI} AI NEWS</div>
-          <h1 class="cover-h1">{carousel.get('cover_headline', 'AI NEWS')}</h1>
-          <p class="cover-sub">{carousel.get('cover_subheadline', '')}</p>
-          <div class="swipe-hint">SWIPE TO EXPLORE →</div>
-          <div class="dots">{_dots(10, 0)}</div>
-        </div>
+      <div class="cover-sticker">{FLAG_EMOJI}<br><span class="sticker-label">CM</span></div>
+      <span class="cover-handle">{ACCOUNT_HANDLE}</span>
+      {meme_html}
+      <div class="cover-bottom">
+        <div class="cover-source"><span class="src-line"></span>CLAUDE MALAYSIA<span class="src-line"></span></div>
+        <div class="cover-badge">● {badge}</div>
+        <h1 class="cover-h1">{carousel.get('cover_headline', 'AI NEWS')}</h1>
+        <p class="cover-sub">{carousel.get('cover_subheadline', '')}</p>
+        <div class="swipe-hint">SWIPE TO EXPLORE →</div>
+        <div class="dots">{_dots(10, 0)}</div>
       </div>
       <div class="prog-track"><div class="prog-fill" style="width:10%"></div></div>
     </div>""")
 
     # ── Slides 2–9: Inner ───────────────────────────────────────────────────
     for i, slide in enumerate(carousel.get("slides", [])):
-        idx       = i + 1
-        img_b64   = _img_to_b64(image_paths[idx]) if idx < len(image_paths) else ""
-        callout   = _accent_line(slide.get("amber_line", ""))
-        body      = _accent_line(slide.get("body", ""))
-        num       = slide.get("num", i + 2)
-        pct       = int((num / 10) * 100)
+        idx     = i + 1
+        img_b64 = _img_to_b64(image_paths[idx]) if idx < len(image_paths) else ""
+        callout = _accent_line(slide.get("amber_line", ""))
+        body    = _accent_line(slide.get("body", ""))
+        num     = slide.get("num", i + 2)
+        pct     = int((num / 10) * 100)
         slides_html.append(f"""
     <div class="slide inner-slide">
       <div class="photo photo-dim" style="background-image:url('data:image/jpeg;base64,{img_b64}')"></div>
@@ -86,7 +91,7 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     slides_html.append(f"""
     <div class="slide cta-slide">
       <div class="photo" style="background-image:url('data:image/jpeg;base64,{cta_b64}')"></div>
-      <div class="cta-glow"></div>
+      <div class="cta-scrim"></div>
       <div class="top-line"></div>
       <div class="cta-inner">
         <span class="handle">{ACCOUNT_HANDLE}</span>
@@ -105,107 +110,152 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
 <html>
 <head>
 <meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 <style>
   * {{ margin:0; padding:0; box-sizing:border-box; }}
   body {{ background:#000; font-family:'Inter',system-ui,sans-serif; overflow:hidden; }}
 
   :root {{
-    --bg:      #090909;
-    --acc:     #C8714A;
-    --text:    #F0EDE8;
-    --dim:     rgba(240,237,232,0.52);
-    --muted:   rgba(240,237,232,0.22);
-    --border:  rgba(240,237,232,0.07);
+    --bg:    #090909;
+    --acc:   #C8714A;
+    --text:  #F0EDE8;
+    --dim:   rgba(240,237,232,0.52);
+    --muted: rgba(240,237,232,0.22);
+    --border:rgba(240,237,232,0.07);
   }}
 
   .viewport {{ width:{VIEWPORT_W}px; height:{VIEWPORT_H}px; overflow:hidden; position:relative; }}
   .track    {{ display:flex; width:{10 * VIEWPORT_W}px; transition:transform .3s ease; }}
 
-  /* ── Base slide ── */
+  /* ── Base Slide ── */
   .slide {{
     width:{VIEWPORT_W}px; height:{VIEWPORT_H}px; flex-shrink:0;
     background:var(--bg); position:relative; overflow:hidden;
   }}
-  /* Dot grid texture */
-  .slide::after {{
-    content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
-    background-image: radial-gradient(circle, rgba(240,237,232,0.04) 1px, transparent 1px);
-    background-size: 24px 24px;
-  }}
 
-  /* Subtle photo texture (used on all slides) */
+  /* Shared photo layer (inner + CTA at low opacity) */
   .photo {{
-    position:absolute; inset:0; z-index:2;
-    background-size:cover; background-position:center;
-    opacity:.07;
+    position:absolute; inset:0; z-index:1;
+    background-size:cover; background-position:center; opacity:.07;
   }}
   .photo-dim {{ opacity:.04; }}
 
-  /* Orange accent rule at slide top */
+  /* Orange top rule */
   .top-line {{
     position:absolute; top:0; left:0; right:0; height:1.5px;
     background:var(--acc); z-index:10;
   }}
 
-  /* Progress bar at slide bottom */
+  /* Progress bar */
   .prog-track {{
     position:absolute; bottom:0; left:0; right:0; height:1.5px;
     background:var(--border); z-index:10;
   }}
   .prog-fill {{ height:100%; background:var(--acc); }}
 
-  /* Shared handle */
-  .handle {{
-    font-size:9px; color:var(--muted); letter-spacing:1px; text-transform:lowercase;
+  /* ── Cover ──────────────────────────────────────────────────────────── */
+  .cover-photo {{
+    position:absolute; inset:0; z-index:1;
+    background-size:cover; background-position:center top;
+    opacity:1;
   }}
-
-  /* ── Cover ────────────────────────────────────────────────────────────── */
-  .cover-glow {{
-    position:absolute; inset:0; z-index:3;
-    background: radial-gradient(ellipse at 20% 100%, rgba(200,113,74,.22) 0%, transparent 56%);
+  /* Strong bottom scrim — photo visible top half, dark bottom half */
+  .cover-scrim {{
+    position:absolute; inset:0; z-index:2;
+    background: linear-gradient(to top,
+      rgba(0,0,0,.97) 0%,
+      rgba(0,0,0,.90) 26%,
+      rgba(0,0,0,.28) 54%,
+      rgba(0,0,0,.04) 72%,
+      transparent 100%);
   }}
-  .cover-inner {{
-    position:relative; z-index:4; height:100%;
-    padding:22px 30px 28px;
-    display:flex; flex-direction:column;
+  /* Claude Malaysia circle sticker — top left */
+  .cover-sticker {{
+    position:absolute; top:18px; left:20px; z-index:6;
+    width:54px; height:54px; border-radius:50%;
+    background:var(--acc);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-size:16px; line-height:1; color:#fff;
   }}
-  .cover-body {{ margin-top:auto; }}
-
-  .cover-tag {{
-    font-size:9px; font-weight:700; letter-spacing:3.5px; text-transform:uppercase;
-    color:var(--acc); display:flex; align-items:center; gap:8px; margin-bottom:14px;
+  .sticker-label {{
+    font-size:9px; font-weight:900; letter-spacing:.5px; line-height:1.2;
   }}
-  .tag-dash {{ display:inline-block; width:18px; height:1.5px; background:var(--acc); flex-shrink:0; }}
-
+  /* Account handle — top right */
+  .cover-handle {{
+    position:absolute; top:22px; right:20px; z-index:6;
+    font-size:9px; color:rgba(255,255,255,.25); letter-spacing:1px;
+    text-transform:lowercase;
+  }}
+  /* Meme chat bubble overlay */
+  .meme-bubble {{
+    position:absolute; top:86px; left:18px; z-index:6;
+    max-width:75%;
+    background:rgba(22,22,22,.94);
+    border-radius:4px 18px 18px 18px;
+    padding:12px 16px;
+    font-size:13px; color:rgba(255,255,255,.90);
+    line-height:1.55; font-style:italic;
+    transform:rotate(-1.5deg);
+    box-shadow:0 4px 28px rgba(0,0,0,.65);
+    border:1px solid rgba(255,255,255,.07);
+  }}
+  /* Bottom content zone */
+  .cover-bottom {{
+    position:absolute; bottom:0; left:0; right:0; z-index:5;
+    padding:0 22px 26px;
+    display:flex; flex-direction:column; align-items:center;
+  }}
+  /* "— CLAUDE MALAYSIA —" source tag */
+  .cover-source {{
+    font-size:9px; font-weight:700; letter-spacing:3px;
+    color:rgba(255,255,255,.40); text-transform:uppercase;
+    display:flex; align-items:center; gap:8px; width:100%;
+    justify-content:center; margin-bottom:10px;
+  }}
+  .src-line {{ flex:1; max-width:44px; height:1px; background:rgba(255,255,255,.25); }}
+  /* Category badge */
+  .cover-badge {{
+    font-size:11px; font-weight:700; letter-spacing:1.5px;
+    color:var(--acc); text-transform:uppercase; margin-bottom:10px;
+  }}
+  /* Massive headline */
   .cover-h1 {{
-    font-size:40px; font-weight:800; color:var(--text);
-    line-height:1.06; letter-spacing:-1.5px; text-transform:uppercase;
-    margin-bottom:14px;
+    font-size:36px; font-weight:900; color:#fff;
+    line-height:1.07; text-transform:uppercase; letter-spacing:-.3px;
+    text-align:center; margin-bottom:10px;
+    text-shadow:0 2px 24px rgba(0,0,0,.5);
   }}
   .cover-sub {{
-    font-size:13px; color:var(--dim); line-height:1.58;
-    margin-bottom:20px; max-width:94%;
+    font-size:12px; font-weight:600; color:rgba(255,255,255,.62);
+    text-align:center; margin-bottom:14px; max-width:92%;
   }}
   .swipe-hint {{
-    font-size:8.5px; letter-spacing:3.5px; color:var(--muted);
-    text-transform:uppercase; margin-bottom:10px;
+    font-size:8px; letter-spacing:3.5px; color:rgba(255,255,255,.26);
+    text-transform:uppercase; margin-bottom:9px;
   }}
   .dots {{ display:flex; gap:4px; align-items:center; }}
   .dot {{ width:5px; height:5px; border-radius:50%; background:rgba(240,237,232,.15); }}
   .dot.on {{ background:var(--acc); width:18px; border-radius:2px; }}
 
-  /* ── Inner slides ─────────────────────────────────────────────────────── */
+  /* ── Inner Slides ─────────────────────────────────────────────────── */
+  /* Dot grid */
+  .inner-slide::after {{
+    content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background-image:radial-gradient(circle,rgba(240,237,232,.04) 1px,transparent 1px);
+    background-size:24px 24px;
+  }}
   .slide-num {{
     position:absolute; top:16px; right:22px; z-index:5;
     font-size:11px; color:var(--muted); letter-spacing:.5px;
     font-variant-numeric:tabular-nums;
   }}
   .num-total {{ opacity:.45; font-size:10px; }}
-
+  .handle {{
+    font-size:9px; color:var(--muted); letter-spacing:1px; text-transform:lowercase;
+  }}
   .inner-layout {{
     position:relative; z-index:4; height:100%;
-    padding:20px 30px 24px; display:flex; flex-direction:column;
+    padding:20px 28px 24px; display:flex; flex-direction:column;
   }}
   .inner-body {{
     flex:1; display:flex; flex-direction:column; justify-content:center;
@@ -229,22 +279,20 @@ def build_html(carousel: dict, image_paths: list[str], out_path: str) -> str:
     font-size:14px; font-weight:600; color:var(--text); line-height:1.55;
   }}
   .acc {{ color:var(--acc); }}
-  .body-text {{
-    font-size:13px; color:var(--dim); line-height:1.72;
-  }}
+  .body-text {{ font-size:13px; color:var(--dim); line-height:1.72; }}
   .arr {{
     position:absolute; right:18px; bottom:22px; z-index:5;
     font-size:20px; color:var(--acc); opacity:.55; line-height:1;
   }}
 
-  /* ── CTA ──────────────────────────────────────────────────────────────── */
-  .cta-glow {{
-    position:absolute; inset:0; z-index:3;
-    background: radial-gradient(ellipse at 50% 85%, rgba(200,113,74,.18) 0%, transparent 60%);
+  /* ── CTA Slide ────────────────────────────────────────────────────── */
+  .cta-scrim {{
+    position:absolute; inset:0; z-index:2;
+    background:radial-gradient(ellipse at 50% 85%,rgba(200,113,74,.18) 0%,transparent 60%);
   }}
   .cta-inner {{
     position:relative; z-index:4; height:100%;
-    padding:22px 30px 28px; display:flex; flex-direction:column;
+    padding:22px 28px 28px; display:flex; flex-direction:column;
   }}
   .cta-body {{
     flex:1; display:flex; flex-direction:column;
@@ -303,7 +351,7 @@ async def _export_pngs(html_path: str, out_dir: str, n_slides: int = 10) -> list
         )
         abs_path = os.path.abspath(html_path)
         await page.goto(f"file://{abs_path}", wait_until="networkidle")
-        await page.wait_for_timeout(2000)  # allow font render
+        await page.wait_for_timeout(2000)
 
         vp = await page.query_selector(".viewport")
         for i in range(n_slides):

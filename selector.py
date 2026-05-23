@@ -111,6 +111,8 @@ Writing rules — study these carefully:
 - Slide 3 MUST localise to {COUNTRY}. Name real companies, government bodies ({GOV_BODIES}), or professionals affected.
 - Caption: Start with a provocative 1-line hook. Then 2-3 short lines expanding it. End with Comment CLAUDE.
 - Write EXACTLY 8 slides (num 2 through 9). Do NOT write a slide 10 — the CTA is generated automatically.
+- cover_badge: Pick one — BREAKING (major new announcement), MALAYSIA (local story), AI NEWS (global AI), EXCLUSIVE (insider/first), VIRAL (meme/funny).
+- meme_text: Only for funny/ironic/meme stories. Max 2 short lines, written like a screenshot of someone's shocked reaction or a tweet. Empty string for straight news.
 
 Return valid JSON only:
 {{
@@ -119,8 +121,10 @@ Return valid JSON only:
   "cover_formula": 3,
   "cover_headline": "Someone Built a $32 Device\\nThat Shows Your Claude Code\\nUsage in Real Time",
   "cover_subheadline": "AI usage tracking just went physical. And it only costs $32.",
+  "cover_badge": "BREAKING",
+  "meme_text": "Optional. For meme-worthy stories only (AI behaving weirdly, funny reversals, ironic stats): 1-2 lines of witty commentary shown as a chat bubble on the cover. Write it like a tweet reaction. Leave empty string for straight news.",
   "caption": "A $32 gadget is now more useful than most $2,000 AI dashboards.\\n\\nHere's what it does — and why developers in {COUNTRY} are already copying it.\\n\\nSwipe to see the full breakdown ➡️\\n\\nComment \\"CLAUDE\\" to join {COMMUNITY_NAME} {FLAG_EMOJI}\\n→ {COMMUNITY_URL}\\n\\n#ai #malaysia #claudeai #aitools #technews",
-  "cover_image_prompt": "Choose the most visually BOLD and dramatic scene that matches the story topic. Use real-world photographic subjects: dramatic aerial city night lights, storm clouds over skyline, neon-lit streets, lone figure in vast tech landscape, server room blue glow, satellite view of city grid. NEVER logos, NEVER flat graphics, NEVER corporate illustrations. Dark and cinematic. No text. Portrait.",
+  "cover_image_prompt": "A dramatic, high-quality photographic portrait. Prefer: a well-known tech CEO or entrepreneur relevant to this story (e.g. Sam Altman, Sundar Pichai, Elon Musk, local Malaysian entrepreneur), OR a cinematic real-world scene (aerial city night, storm clouds, server room blue glow). Full-bleed portrait orientation. No logos, no flat graphics, no text. Dark and bold.",
   "slides": [
     {{
       "num": 2,

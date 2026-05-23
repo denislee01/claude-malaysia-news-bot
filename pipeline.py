@@ -44,14 +44,11 @@ def run(dry_run: bool = False):
     story, carousel = pairs[0]
     print(f"\n[pipeline] Selected: {story['headline'][:70]}")
 
-    # Cover slide always uses Pexels with Claude's cinematic cover_image_prompt.
-    # Article og:images (logos, brand graphics, flat screenshots) are not bold
-    # enough for Instagram — Pexels gives us dramatic, unique photos every run.
-
-    # 4. Generate images
+    # 4. Generate images — use article og:image for cover if available (real person/CEO photos)
     print("\n── STEP 4: IMAGE GENERATION ──")
     img_dir = f"/tmp/cm_imgs_{run_ts}"
-    image_paths = image_gen.generate_slide_images(carousel, img_dir)
+    og_url  = story.get("og_image_url", "")
+    image_paths = image_gen.generate_slide_images(carousel, img_dir, og_image_url=og_url)
 
     # Pad to 10 images if fewer generated
     while len(image_paths) < 10:
