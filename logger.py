@@ -1,35 +1,63 @@
 """Track posted stories in posted_urls.json to avoid duplicates."""
 import json
-import os
+from datetime import datetime, timezone
 from pathlib import Path
 
 _LOG_FILE = Path(__file__).parent / "posted_urls.json"
 
 
-def get_posted_urls() -> set:
-    """Return set of already-posted story URLs."""
+def _load() -> dict:
     if not _LOG_FILE.exists():
-        return set()
+        return {"urls": [], "posts": []}
     try:
-        data = json.loads(_LOG_FILE.read_text(encoding="utf-8"))
-        return set(data.get("urls", []))
-    except Exception as e:
-        print(f"[logger] Could not read {_LOG_FILE}: {e}")
-        return set()
+        return json.loads(_LOG_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return {"urls": [], "posts": []}
+
+
+def get_posted_urls() -> set:
+    return set(_load().get("urls", []))
+
+
+def get_last_post_time() -> datetime | None:
+    """Return UTC datetime of the most recent post, or None if no posts yet."""
+    posts = _load().get("posts", [])
+    if not posts:
+        return None
+    try:
+        return datetime.fromisoformat(posts[-1]["posted_at"])
+    except Exception:
+        return None
+
+
+def hours_since_last_post() -> float:
+    """Return hours elapsed since the last post. Returns 999 if never posted."""
+    last = get_last_post_time()
+    if last is None:
+        return 999.0
+    delta = datetime.now(timezone.utc) - last
+    return delta.total_seconds() / 3600
 
 
 def log_posted(story: dict, ig_post_id: str, carousel: dict):
-    """Append the posted story URL to the log file."""
-    try:
-        data = {"urls": []} if not _LOG_FILE.exists() else json.loads(_LOG_FILE.read_text(encoding="utf-8"))
-        if story["url"] not in data["urls"]:
-            data["urls"].append(story["url"])
-        _LOG_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
-        print(f"[logger] Logged: {story['headline'][:60]}")
-    except Exception as e:
-        print(f"[logger] Failed to log story: {e}")
+    data = _load()
+    data.setdefault("urls", [])
+    data.setdefault("posts", [])
+
+    if story["url"] not in data["urls"]:
+        data["urls"].append(story["url"])
+
+    data["posts"].append({
+        "url": story["url"],
+        "headline": story["headline"][:80],
+        "ig_post_id": ig_post_id,
+        "posted_at": datetime.now(timezone.utc).isoformat(),
+    })
+
+    _LOG_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    print(f"[logger] Logged: {story['headline'][:60]}")
 
 
 if __name__ == "__main__":
-    urls = get_posted_urls()
-    print(f"[logger] {len(urls)} stories already posted")
+    print(f"[logger] {len(get_posted_urls())} stories posted")
+    print(f"[logger] Hours since last post: {hours_since_last_post():.1f}h")

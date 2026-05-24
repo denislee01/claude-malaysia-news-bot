@@ -28,10 +28,15 @@ def run(dry_run: bool = False):
         print("[pipeline] No stories scraped — exiting.")
         sys.exit(0)
 
-    # 2. Get posted URLs for dedup
+    # 2. Get posted URLs for dedup + skip if already posted this window
     print("\n── STEP 2: DEDUP CHECK ──")
     posted_urls = logger.get_posted_urls()
     print(f"[pipeline] {len(posted_urls)} already-posted URLs loaded")
+    hours_ago = logger.hours_since_last_post()
+    print(f"[pipeline] Last post was {hours_ago:.1f}h ago")
+    if not dry_run and hours_ago < 7:
+        print(f"[pipeline] Already posted {hours_ago:.1f}h ago — skipping to avoid double-post.")
+        sys.exit(0)
 
     # 3. Select + write
     print("\n── STEP 3: SELECT + WRITE ──")
