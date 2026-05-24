@@ -135,59 +135,52 @@ Return valid JSON only:
     }},
     {{
       "num": 3,
-      "label": "{COUNTRY.upper()} ANGLE",
+      "label": "MALAYSIA ANGLE",
       "headline": "Write how this directly affects someone living and working in {COUNTRY}",
-      "amber_line": "**The most direct impact on {COUNTRY} professionals or businesses — with a number if possible.**",
-      "body": "3 short sentences. Name real {COUNTRY} companies, sectors ({GOV_BODIES}), or use {CURRENCY} amounts. Be specific.",
+      "insight": "One sentence, max 12 words. Direct impact on {COUNTRY} professionals or businesses — with a number if possible.",
       "image_prompt": "Kuala Lumpur city skyline or relevant local scene, dark moody, no text"
     }},
     {{
       "num": 4,
       "label": "THE NUMBER",
       "headline": "Write the specific stat or data point as a surprising statement",
-      "amber_line": "**The exact figure — e.g. $7.3 billion, 48x faster, 73% of companies.**",
-      "body": "3 sentences. What the number means, how it compares to something familiar, why it changes things.",
-      "image_prompt": "Abstract data visualisation, dark background, amber highlights, no text"
+      "insight": "One sentence, max 12 words. The exact figure — e.g. $7.3 billion, 48x faster, 73% of companies.",
+      "image_prompt": "Abstract data visualisation, dark background, no text"
     }},
     {{
       "num": 5,
       "label": "MOST PEOPLE DON'T KNOW",
       "headline": "Write the counterintuitive truth this story reveals",
-      "amber_line": "**The thing that surprises even people who follow AI closely.**",
-      "body": "3 sentences. Common assumption vs reality. Be direct and a little provocative.",
+      "insight": "One sentence, max 12 words. The thing that surprises even people who follow AI closely.",
       "image_prompt": "Contrast concept, light vs dark, modern vs old, no text"
     }},
     {{
       "num": 6,
       "label": "EXPERT TAKE",
       "headline": "Write what a credible person or organisation actually said about this",
-      "amber_line": "**A direct quote or specific claim from a named expert, company, or researcher.**",
-      "body": "3 sentences. Who said it, what they said, why it matters for {COUNTRY}.",
+      "insight": "One sentence, max 12 words. A direct quote or specific claim from a named expert.",
       "image_prompt": "Professional speaker or conference scene, spotlight, dark background, no text"
     }},
     {{
       "num": 7,
       "label": "HOW WE GOT HERE",
       "headline": "Write the key turning point or backstory in one specific statement",
-      "amber_line": "**The single event or year that made today's news inevitable.**",
-      "body": "3 sentences. Quick timeline of 2-3 key moments. Keep it punchy.",
+      "insight": "One sentence, max 12 words. The single event or year that made today's news inevitable.",
       "image_prompt": "Timeline or milestone concept, dark background, glowing points, no text"
     }},
     {{
       "num": 8,
       "label": "WHAT TO DO NOW",
       "headline": "Write a specific actionable move someone in {COUNTRY} can take today",
-      "amber_line": "**The one thing early movers in {COUNTRY} are doing that others aren't.**",
-      "body": "3 sentences. Concrete steps, tools, or decisions. Name the actual thing — not generic advice.",
+      "insight": "One sentence, max 12 words. The one thing early movers in {COUNTRY} are doing right now.",
       "image_prompt": "Person working on laptop at night, city lights, focused, no text"
     }},
     {{
       "num": 9,
       "label": "WATCH OUT FOR",
       "headline": "Write the specific trap or overhyped claim people in {COUNTRY} are falling for",
-      "amber_line": "**The exact thing that is not worth your time or {CURRENCY} right now.**",
-      "body": "3 sentences. Be specific about the mistake. Call it out directly. No softening.",
-      "image_prompt": "Warning or caution concept, red amber light, dramatic shadows, no text"
+      "insight": "One sentence, max 12 words. The exact thing not worth your time or money right now.",
+      "image_prompt": "Warning or caution concept, dramatic shadows, no text"
     }}
   ]
 }}
