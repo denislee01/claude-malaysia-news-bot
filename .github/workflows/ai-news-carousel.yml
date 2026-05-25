@@ -18,6 +18,10 @@ on:
 permissions:
   contents: write            # Allows committing posted_urls.json back to repo
 
+concurrency:
+  group: instagram-post      # Only one run at a time — prevents double-posts from concurrent retries
+  cancel-in-progress: false  # Queue, don't cancel — retries should still run
+
 jobs:
   build-and-post:
     runs-on: ubuntu-latest
@@ -52,9 +56,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add posted_urls.json
           git diff --staged --quiet || git commit -m "chore: update posted_urls [skip ci]"
-          git pull --rebase origin main
           git push
 
       - name: Upload slide artifacts (for inspection)
