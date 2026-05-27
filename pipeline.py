@@ -10,12 +10,38 @@ import sys
 import argparse
 from datetime import datetime, timezone
 
+import requests
 import scraper
 import selector
 import image_gen
 import builder
 import poster
 import logger
+
+
+def _hours_since_last_ig_post() -> float:
+    """Query Instagram directly for the actual last post time — never lies even if git commit failed."""
+    ig_user_id = os.environ.get("IG_USER_ID", "")
+    ig_token = os.environ.get("IG_ACCESS_TOKEN", "")
+    if not ig_user_id or not ig_token:
+        return 999.0
+    try:
+        resp = requests.get(
+            f"https://graph.instagram.com/v19.0/{ig_user_id}/media",
+            params={"fields": "timestamp", "limit": 1, "access_token": ig_token},
+            timeout=10,
+        )
+        data = resp.json()
+        posts = data.get("data", [])
+        if not posts:
+            return 999.0
+        last_ts = datetime.fromisoformat(posts[0]["timestamp"].replace("Z", "+00:00"))
+        hours = (datetime.now(timezone.utc) - last_ts).total_seconds() / 3600
+        print(f"[pipeline] IG API: last post was {hours:.1f}h ago")
+        return hours
+    except Exception as e:
+        print(f"[pipeline] IG API check failed: {e} — falling back to local log")
+        return 999.0
 
 
 def run(dry_run: bool = False):
@@ -32,8 +58,14 @@ def run(dry_run: bool = False):
     print("\n── STEP 2: DEDUP CHECK ──")
     posted_urls = logger.get_posted_urls()
     print(f"[pipeline] {len(posted_urls)} already-posted URLs loaded")
-    hours_ago = logger.hours_since_last_post()
-    print(f"[pipeline] Last post was {hours_ago:.1f}h ago")
+
+    # Check IG API first (authoritative — works even when git commit failed last run)
+    hours_ago = _hours_since_last_ig_post()
+    # Fall back to local log if IG API unavailable
+    if hours_ago == 999.0:
+        hours_ago = logger.hours_since_last_post()
+        print(f"[pipeline] Local log: last post was {hours_ago:.1f}h ago")
+
     if not dry_run and hours_ago < 7:
         print(f"[pipeline] Already posted {hours_ago:.1f}h ago — skipping to avoid double-post.")
         sys.exit(0)
