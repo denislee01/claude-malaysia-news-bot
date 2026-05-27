@@ -7,8 +7,26 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 
+# og:image URLs from these domains are generic/branded — not article-specific photos
+_BAD_OG_DOMAINS = (
+    "lh3.googleusercontent.com",
+    "lh4.googleusercontent.com",
+    "news.google.com",
+    "gstatic.com",
+    "googleusercontent.com",
+)
+
+
+def _is_bad_og_url(url: str) -> bool:
+    """Return True if the og:image URL is a known generic/branded image source."""
+    return any(domain in url for domain in _BAD_OG_DOMAINS)
+
+
 def _fetch_url_image(url: str) -> bytes | None:
     """Download an image directly from a URL (e.g. article og:image)."""
+    if _is_bad_og_url(url):
+        print(f"[image_gen] og:image skipped (generic Google domain): {url[:60]}...")
+        return None
     try:
         resp = requests.get(
             url, timeout=15,
@@ -92,69 +110,55 @@ def _prompt_to_query(prompt: str, allow_singapore: bool = False) -> str:
     return " ".join(filtered[:5])
 
 
-def _fetch_pexels(query: str, slide_index: int, fallback_query: str | None = None) -> bytes | None:
-    """Call Pexels search API and return raw image bytes, or None on failure.
+def _fetch_pexels(query: str, slide_index: int, fallback_query: str | None = None,
+                  used_urls: set | None = None) -> tuple[bytes | None, str]:
+    """Call Pexels search API and return (raw image bytes, photo_url), or (None, '').
 
-    If fallback_query is provided and the primary query returns no results,
-    automatically retries with the fallback query.
+    Skips photos whose URLs are in used_urls to prevent reuse across posts.
     """
     if not PEXELS_API_KEY:
-        return None
+        return None, ""
 
-    def _search(q: str) -> bytes | None:
+    def _search(q: str) -> tuple[bytes | None, str]:
         try:
-            # Random page (1-5) so each run gets a different set of photos — 75 photo pool
-            page = random.randint(1, 5)
-            resp = requests.get(
-                "https://api.pexels.com/v1/search",
-                headers={"Authorization": PEXELS_API_KEY},
-                params={
-                    "query": q,
-                    "per_page": 15,
-                    "page": page,
-                    "orientation": "portrait",
-                    "size": "large",
-                },
-                timeout=15,
-            )
-            resp.raise_for_status()
-            photos = resp.json().get("photos", [])
-            if not photos:
-                # Try page 1 as fallback if random page had no results
-                if page > 1:
-                    resp = requests.get(
-                        "https://api.pexels.com/v1/search",
-                        headers={"Authorization": PEXELS_API_KEY},
-                        params={
-                            "query": q,
-                            "per_page": 15,
-                            "page": 1,
-                            "orientation": "portrait",
-                            "size": "large",
-                        },
-                        timeout=15,
-                    )
-                    resp.raise_for_status()
-                    photos = resp.json().get("photos", [])
+            for page in random.sample(range(1, 6), 5):  # try all 5 pages in random order
+                resp = requests.get(
+                    "https://api.pexels.com/v1/search",
+                    headers={"Authorization": PEXELS_API_KEY},
+                    params={
+                        "query": q,
+                        "per_page": 15,
+                        "page": page,
+                        "orientation": "portrait",
+                        "size": "large",
+                    },
+                    timeout=15,
+                )
+                resp.raise_for_status()
+                photos = resp.json().get("photos", [])
                 if not photos:
-                    print(f"[image_gen] Pexels: no results for '{q}'")
-                    return None
-            # Pick a random photo from the pool so slides vary between runs
-            photo = random.choice(photos)
-            img_url = photo["src"]["large2x"]
-            img_resp = requests.get(img_url, timeout=30)
-            img_resp.raise_for_status()
-            print(f"[image_gen] Pexels: '{q}' (page {page}) → {img_url[:60]}...")
-            return img_resp.content
+                    continue
+                # Shuffle and pick first photo not in used_urls
+                random.shuffle(photos)
+                for photo in photos:
+                    img_url = photo["src"]["large2x"]
+                    if used_urls and img_url in used_urls:
+                        continue
+                    img_resp = requests.get(img_url, timeout=30)
+                    img_resp.raise_for_status()
+                    print(f"[image_gen] Pexels: '{q}' (page {page}) → {img_url[:60]}...")
+                    return img_resp.content, img_url
+            print(f"[image_gen] Pexels: no fresh results for '{q}'")
+            return None, ""
         except Exception as e:
             print(f"[image_gen] Pexels error for '{q}': {e}")
-            return None
+            return None, ""
 
-    result = _search(query)
+    result, url = _search(query)
     if result is None and fallback_query and fallback_query != query:
         print(f"[image_gen] Retrying with neutral fallback: '{fallback_query}'")
-        result = _search(fallback_query)
-    return result
+        result, url = _search(fallback_query)
+    return result, url
 
 
 def _crop_and_resize(img_bytes: bytes, path: str):
@@ -204,53 +208,63 @@ def _gradient_fallback(path: str, slide_index: int):
     img.save(path, "JPEG", quality=92)
 
 
-def generate_slide_images(carousel: dict, output_dir: str, og_image_url: str = "") -> list[str]:
-    """Fetch 10 Pexels photos (or gradient fallback) for the carousel slides."""
+def generate_slide_images(carousel: dict, output_dir: str, og_image_url: str = "",
+                          used_img_urls: set | None = None) -> tuple[list[str], set]:
+    """Fetch 10 Pexels photos (or gradient fallback) for the carousel slides.
+
+    Returns (paths, new_used_urls) — new_used_urls includes all URLs used this run,
+    to be merged into the persistent used-URL log so they won't repeat next post.
+    """
     Path(output_dir).mkdir(parents=True, exist_ok=True)
     paths = []
+    session_used = set(used_img_urls or set())  # running set for this session too
 
     # Build query list from carousel prompts
     queries = []
 
-    # Slide 1 — cover (index 0, MY-specific → allow Malaysia in query)
     cover_prompt = carousel.get("cover_image_prompt", "")
     queries.append(_prompt_to_query(cover_prompt, allow_singapore=True) if cover_prompt else _DEFAULT_QUERIES[0])
 
-    # Slides 2–9 — inner
-    # Slide 3 is "THE MALAYSIA ANGLE" → index 2 in queries, allow Malaysia
     for i, slide in enumerate(carousel.get("slides", [])):
         prompt = slide.get("image_prompt", "")
-        query_idx = i + 1  # query index (0=cover, 1=slide2, 2=slide3, ...)
+        query_idx = i + 1
         is_sg_slide = query_idx in _SG_SPECIFIC_SLIDE_INDICES
         queries.append(
             _prompt_to_query(prompt, allow_singapore=is_sg_slide) if prompt
             else _DEFAULT_QUERIES[min(i + 1, 8)]
         )
 
-    # Slide 10 — CTA (index 9, MY-specific)
     queries.append(_DEFAULT_QUERIES[9])
 
-    # Pad / trim to exactly 10
     while len(queries) < 10:
         queries.append(_DEFAULT_QUERIES[len(queries) % len(_DEFAULT_QUERIES)])
     queries = queries[:10]
+
+    new_urls: set = set()
 
     for i, query in enumerate(queries):
         path = os.path.join(output_dir, f"slide_{i+1:02d}.jpg")
 
         img_bytes = None
-        # Cover slide (index 0): try article og:image first — gives us real CEO/person photos
+        # Cover slide: try article og:image first (real person/CEO photos)
         if i == 0 and og_image_url:
             print(f"[image_gen] Trying article og:image for cover: {og_image_url[:60]}...")
             img_bytes = _fetch_url_image(og_image_url)
             if img_bytes:
                 print("[image_gen] og:image used for cover slide ✓")
+                new_urls.add(og_image_url)
             else:
-                print("[image_gen] og:image failed — falling back to Pexels")
+                print("[image_gen] og:image skipped — falling back to Pexels")
 
         if img_bytes is None:
             neutral_fallback = _NEUTRAL_FALLBACK_QUERIES[i] if i in _SG_SPECIFIC_SLIDE_INDICES else None
-            img_bytes = _fetch_pexels(query, slide_index=i, fallback_query=neutral_fallback)
+            img_bytes, img_url = _fetch_pexels(query, slide_index=i,
+                                               fallback_query=neutral_fallback,
+                                               used_urls=session_used)
+            if img_url:
+                new_urls.add(img_url)
+                session_used.add(img_url)  # prevent reuse within same carousel too
+
         if img_bytes:
             _crop_and_resize(img_bytes, path)
         else:
@@ -259,7 +273,7 @@ def generate_slide_images(carousel: dict, output_dir: str, og_image_url: str = "
         paths.append(path)
 
     print(f"[image_gen] Generated {len(paths)} slide images in {output_dir}")
-    return paths
+    return paths, new_urls
 
 
 if __name__ == "__main__":

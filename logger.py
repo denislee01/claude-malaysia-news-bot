@@ -19,6 +19,11 @@ def get_posted_urls() -> set:
     return set(_load().get("urls", []))
 
 
+def get_used_img_urls() -> set:
+    """Return all Pexels/og:image URLs used in past posts — to avoid reuse."""
+    return set(_load().get("img_urls", []))
+
+
 def get_last_post_time() -> datetime | None:
     """Return UTC datetime of the most recent post, or None if no posts yet."""
     posts = _load().get("posts", [])
@@ -39,13 +44,18 @@ def hours_since_last_post() -> float:
     return delta.total_seconds() / 3600
 
 
-def log_posted(story: dict, ig_post_id: str, carousel: dict):
+def log_posted(story: dict, ig_post_id: str, carousel: dict, new_img_urls: set | None = None):
     data = _load()
     data.setdefault("urls", [])
     data.setdefault("posts", [])
+    data.setdefault("img_urls", [])
 
     if story["url"] not in data["urls"]:
         data["urls"].append(story["url"])
+
+    for u in (new_img_urls or set()):
+        if u not in data["img_urls"]:
+            data["img_urls"].append(u)
 
     data["posts"].append({
         "url": story["url"],

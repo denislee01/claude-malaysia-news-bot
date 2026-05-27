@@ -53,7 +53,10 @@ def run(dry_run: bool = False):
     print("\n── STEP 4: IMAGE GENERATION ──")
     img_dir = f"/tmp/cm_imgs_{run_ts}"
     og_url  = story.get("og_image_url", "")
-    image_paths = image_gen.generate_slide_images(carousel, img_dir, og_image_url=og_url)
+    used_img_urls = logger.get_used_img_urls()
+    image_paths, new_img_urls = image_gen.generate_slide_images(
+        carousel, img_dir, og_image_url=og_url, used_img_urls=used_img_urls
+    )
 
     # Pad to 10 images if fewer generated
     while len(image_paths) < 10:
@@ -76,7 +79,7 @@ def run(dry_run: bool = False):
 
     # 7. Log
     print("\n── STEP 7: LOG ──")
-    logger.log_posted(story, submission_id, carousel)
+    logger.log_posted(story, submission_id, carousel, new_img_urls=new_img_urls)
 
     print(f"\n✓ DONE — Posted: {story['headline'][:60]}")
     print(f"  Submission ID: {submission_id}")
