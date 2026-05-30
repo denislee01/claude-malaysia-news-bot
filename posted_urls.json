@@ -27,7 +27,8 @@
     "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOS2h2QzZ2REpsWVk5Z1FHVEZaSWRMMEY4RmM4WjMxUlgxcXB4VE0yZndnSWUxWmMzblppTDB1N1d5ZVFCTHE4QmR0Z1JVbkZCRlg5NEZLSEVlMVBMandLem0zbTVTbzVrc2Q4NVVQZ25BaXNKRG1WRkh0dVF4N0FuUUVaMlJMcFJmcjlsYVBFLWtRQXBqVHhfS3NoUm85TzVUYXpZNl9VajkycUxPM25ZYXIwWmdkX0pWS0lfMHR5N3FrVUZ6c1Q5YWpQWGNLdlZnYkFOVWJLSVZwQVFqeklqSl9GT2JEbktUWGhST0x3?oc=5",
     "https://news.google.com/rss/articles/CBMinwFBVV95cUxPM0RlZ0ZlR0NlN0lBU2xIZVNHTFBDS2oxRnJLTjNEcXJrTG5LTzFaVDV1cFc0NVN6UVo4Q1ZpZURBaGhaMGNOZGRjYXlTVjdVVHd0d3ZVUWdkYk1mUzQ0cFB4TjdmNkRsWm5tTnEzZlQ0cmgwRmZmQ3lvRmw1VGZieDBYT0FQLVVhc00xakt4RzBuZEc0VVBSeElVNlRsczQ?oc=5",
     "https://news.google.com/rss/articles/CBMizAFBVV95cUxNUV85bzhTamkxUXp5MDZUYXBtMlN0S0ZQeDdLZ3I4NFJ2LVlFNFNCTWNwRFlZbkowcDJ5bXpTbXUzSWcxMkpwUVF0S1Fjd3dfa1g3UHdlTm51QUdhZFdQTUtxSDFoWVBHYjU1elZxZXR5ZVdteWlOUXhjMU1iVlJuQWhjNTZWQ1ZOX3p3cHQxSkJLS1VxTlZ5RDU5bmRuOXhaZkxSZXktLVNKMXJybmRSQ25tYWFwbHFEMV9TUHFqUDZMOXc0LUkzU3BNS18?oc=5",
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/"
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
+    "https://github.com/huggingface/transformers"
   ],
   "posts": [
     {
@@ -95,6 +96,12 @@
       "headline": "9 demos of Gemini Omni and Gemini 3.5 in action",
       "ig_post_id": "18132338701570683",
       "posted_at": "2026-05-29T19:46:39.630034+00:00"
+    },
+    {
+      "url": "https://github.com/huggingface/transformers",
+      "headline": "huggingface/transformers \u2014 \ud83e\udd17 Transformers: the model-definition framework for st",
+      "ig_post_id": "18078812963559268",
+      "posted_at": "2026-05-30T09:08:18.766175+00:00"
     }
   ],
   "img_urls": [
@@ -157,6 +164,16 @@
     "https://images.pexels.com/photos/26725643/pexels-photo-26725643.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/8837768/pexels-photo-8837768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/30669655/pexels-photo-30669655.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/14240573/pexels-photo-14240573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/14240573/pexels-photo-14240573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/9312169/pexels-photo-9312169.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/10975135/pexels-photo-10975135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/18068777/pexels-photo-18068777.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/4175323/pexels-photo-4175323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/33792045/pexels-photo-33792045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/31194184/pexels-photo-31194184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/14558163/pexels-photo-14558163.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/1110085/pexels-photo-1110085.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://repository-images.githubusercontent.com/155220641/a16c4880-a501-11ea-9e8f-646cf611702e",
+    "https://images.pexels.com/photos/8648351/pexels-photo-8648351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
