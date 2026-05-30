@@ -28,7 +28,8 @@
     "https://news.google.com/rss/articles/CBMinwFBVV95cUxPM0RlZ0ZlR0NlN0lBU2xIZVNHTFBDS2oxRnJLTjNEcXJrTG5LTzFaVDV1cFc0NVN6UVo4Q1ZpZURBaGhaMGNOZGRjYXlTVjdVVHd0d3ZVUWdkYk1mUzQ0cFB4TjdmNkRsWm5tTnEzZlQ0cmgwRmZmQ3lvRmw1VGZieDBYT0FQLVVhc00xakt4RzBuZEc0VVBSeElVNlRsczQ?oc=5",
     "https://news.google.com/rss/articles/CBMizAFBVV95cUxNUV85bzhTamkxUXp5MDZUYXBtMlN0S0ZQeDdLZ3I4NFJ2LVlFNFNCTWNwRFlZbkowcDJ5bXpTbXUzSWcxMkpwUVF0S1Fjd3dfa1g3UHdlTm51QUdhZFdQTUtxSDFoWVBHYjU1elZxZXR5ZVdteWlOUXhjMU1iVlJuQWhjNTZWQ1ZOX3p3cHQxSkJLS1VxTlZ5RDU5bmRuOXhaZkxSZXktLVNKMXJybmRSQ25tYWFwbHFEMV9TUHFqUDZMOXc0LUkzU3BNS18?oc=5",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
-    "https://github.com/huggingface/transformers"
+    "https://github.com/huggingface/transformers",
+    "https://github.com/modelscope/FunASR"
   ],
   "posts": [
     {
@@ -102,6 +103,12 @@
       "headline": "huggingface/transformers \u2014 \ud83e\udd17 Transformers: the model-definition framework for st",
       "ig_post_id": "18078812963559268",
       "posted_at": "2026-05-30T09:08:18.766175+00:00"
+    },
+    {
+      "url": "https://github.com/modelscope/FunASR",
+      "headline": "modelscope/FunASR \u2014 Industrial-grade speech recognition toolkit: 170x realtime, ",
+      "ig_post_id": "18006767780866159",
+      "posted_at": "2026-05-30T16:19:57.820898+00:00"
     }
   ],
   "img_urls": [
@@ -174,6 +181,16 @@
     "https://images.pexels.com/photos/14558163/pexels-photo-14558163.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/1110085/pexels-photo-1110085.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://repository-images.githubusercontent.com/155220641/a16c4880-a501-11ea-9e8f-646cf611702e",
-    "https://images.pexels.com/photos/8648351/pexels-photo-8648351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/8648351/pexels-photo-8648351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/27036754/pexels-photo-27036754.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/6275814/pexels-photo-6275814.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://opengraph.githubassets.com/78c4e38ab2a73290b865ced2cdde3c171688a58e03935becb3321cf1d05335de/modelscope/FunASR",
+    "https://images.pexels.com/photos/32193323/pexels-photo-32193323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/14303708/pexels-photo-14303708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/3859151/pexels-photo-3859151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/30213557/pexels-photo-30213557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/34562491/pexels-photo-34562491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/35915224/pexels-photo-35915224.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/5475760/pexels-photo-5475760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
