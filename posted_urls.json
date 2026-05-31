@@ -29,7 +29,8 @@
     "https://news.google.com/rss/articles/CBMizAFBVV95cUxNUV85bzhTamkxUXp5MDZUYXBtMlN0S0ZQeDdLZ3I4NFJ2LVlFNFNCTWNwRFlZbkowcDJ5bXpTbXUzSWcxMkpwUVF0S1Fjd3dfa1g3UHdlTm51QUdhZFdQTUtxSDFoWVBHYjU1elZxZXR5ZVdteWlOUXhjMU1iVlJuQWhjNTZWQ1ZOX3p3cHQxSkJLS1VxTlZ5RDU5bmRuOXhaZkxSZXktLVNKMXJybmRSQ25tYWFwbHFEMV9TUHFqUDZMOXc0LUkzU3BNS18?oc=5",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
     "https://github.com/huggingface/transformers",
-    "https://github.com/modelscope/FunASR"
+    "https://github.com/modelscope/FunASR",
+    "https://qazinform.com/news/anthropic-surpasses-openai-to-become-worlds-most-valuable-ai-startup"
   ],
   "posts": [
     {
@@ -109,6 +110,12 @@
       "headline": "modelscope/FunASR \u2014 Industrial-grade speech recognition toolkit: 170x realtime, ",
       "ig_post_id": "18006767780866159",
       "posted_at": "2026-05-30T16:19:57.820898+00:00"
+    },
+    {
+      "url": "https://qazinform.com/news/anthropic-surpasses-openai-to-become-worlds-most-valuable-ai-startup",
+      "headline": "Anthropic surpasses OpenAI to become most valuable AI startup",
+      "ig_post_id": "18108396019929704",
+      "posted_at": "2026-05-31T10:03:07.864897+00:00"
     }
   ],
   "img_urls": [
@@ -191,6 +198,16 @@
     "https://images.pexels.com/photos/30213557/pexels-photo-30213557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/34562491/pexels-photo-34562491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/35915224/pexels-photo-35915224.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/5475760/pexels-photo-5475760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/5475760/pexels-photo-5475760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://img.inform.kz/kazinform-photobank/media/2026-05-30/028a6a1d-84cb-4144-9a81-6a92c7d12cbf.jpeg",
+    "https://images.pexels.com/photos/5980735/pexels-photo-5980735.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/24195621/pexels-photo-24195621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8348970/pexels-photo-8348970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/29708256/pexels-photo-29708256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/36122845/pexels-photo-36122845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/34606649/pexels-photo-34606649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/11038242/pexels-photo-11038242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7948045/pexels-photo-7948045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/6345336/pexels-photo-6345336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
