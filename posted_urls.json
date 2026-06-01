@@ -30,7 +30,8 @@
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
     "https://github.com/huggingface/transformers",
     "https://github.com/modelscope/FunASR",
-    "https://qazinform.com/news/anthropic-surpasses-openai-to-become-worlds-most-valuable-ai-startup"
+    "https://qazinform.com/news/anthropic-surpasses-openai-to-become-worlds-most-valuable-ai-startup",
+    "https://www.promptarmor.com/resources/gpt-for-google-sheets-data-exfiltration"
   ],
   "posts": [
     {
@@ -116,6 +117,12 @@
       "headline": "Anthropic surpasses OpenAI to become most valuable AI startup",
       "ig_post_id": "18108396019929704",
       "posted_at": "2026-05-31T10:03:07.864897+00:00"
+    },
+    {
+      "url": "https://www.promptarmor.com/resources/gpt-for-google-sheets-data-exfiltration",
+      "headline": "ChatGPT for Google Sheets exfiltrates workbooks",
+      "ig_post_id": "18134263951577752",
+      "posted_at": "2026-06-01T19:34:04.197108+00:00"
     }
   ],
   "img_urls": [
@@ -208,6 +215,16 @@
     "https://images.pexels.com/photos/34606649/pexels-photo-34606649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/11038242/pexels-photo-11038242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/7948045/pexels-photo-7948045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/6345336/pexels-photo-6345336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/6345336/pexels-photo-6345336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/15714299/pexels-photo-15714299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/30311126/pexels-photo-30311126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26665323/pexels-photo-26665323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/10509289/pexels-photo-10509289.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/5198242/pexels-photo-5198242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8062353/pexels-photo-8062353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7172653/pexels-photo-7172653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/33393702/pexels-photo-33393702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://framerusercontent.com/images/eJKU8yDyAKTNNHfYvQqWDm5e25s.png?width=6679&height=4516",
+    "https://images.pexels.com/photos/12698322/pexels-photo-12698322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
