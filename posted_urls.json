@@ -34,7 +34,8 @@
     "https://www.promptarmor.com/resources/gpt-for-google-sheets-data-exfiltration",
     "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRnpJenh1VDR6VkJuU0M5aEhsVHppTThzRDhtOUktYXhQUGxrc3VRdjM0N0U2elFCR2R0Y0JiWFhNRjBoT3p4Uk5NTHFnQ3I5ZmZOQ29fRy1ON1R4M045Y2F1dDNhMHBuLVlJNnNVMHVvRkd5dVQ2RnhWRUtfSDRuT24xZm1HaVJWZzlVdFhfZUVKdDlEUW1fQmFnbmtSLVBmbFBtZjNR?oc=5",
     "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUncwVHpDeEQybVNaanNZMVRYVkpQMjZFQUk0TWdXMXljN29qOTVCX3NHa3pTWkNVX0VEQzNFTmtQRG9reURzazltSFZKWFlSVGR4XzhkNVRrcDJCVFlkWjdNOV9tNk81dndvWTZXZllpc2UtaXRKMmUzMGJjczZtenhkZ3U5VFJ1ZEszNjdLRHRGOHAzOVZGbUNONzdFd09rTlBkemw3dUJYWlFUWGNtY3JfN2lRU3hPVElUQVYxWTU?oc=5",
-    "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5xbTNTMEhCT0U2N2xIOU0zQlZXZEJkWVNVTjFnU1hqUWVMZ2NNOTdHRUlxSWZJQlZiSnFONzZqVFR5M0ZCb3BDRGo4Q3lCLWJz?oc=5"
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5xbTNTMEhCT0U2N2xIOU0zQlZXZEJkWVNVTjFnU1hqUWVMZ2NNOTdHRUlxSWZJQlZiSnFONzZqVFR5M0ZCb3BDRGo4Q3lCLWJz?oc=5",
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTE12M0M2dFpxNXAzRFFyQXdpV1U2Z3ZVaW1aRTVlcFByRUd6S3l6S0ptWnpiNjdZRHlfTUhHLTFEMk5yak15cGxvWTdFd1diX3pU?oc=5"
   ],
   "posts": [
     {
@@ -144,6 +145,12 @@
       "headline": "ENERtec Asia 2026 opens in Kuala Lumpur, spotlighting energy needs of AI and dat",
       "ig_post_id": "18068197643381021",
       "posted_at": "2026-06-03T18:13:46.654086+00:00"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE12M0M2dFpxNXAzRFFyQXdpV1U2Z3ZVaW1aRTVlcFByRUd6S3l6S0ptWnpiNjdZRHlfTUhHLTFEMk5yak15cGxvWTdFd1diX3pU?oc=5",
+      "headline": "Data centres generate wider indirect economic spillover benefits \u2014 Zafrul",
+      "ig_post_id": "18104622256826449",
+      "posted_at": "2026-06-04T09:16:01.370746+00:00"
     }
   ],
   "img_urls": [
@@ -276,6 +283,16 @@
     "https://images.pexels.com/photos/8554350/pexels-photo-8554350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/10401279/pexels-photo-10401279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/14361322/pexels-photo-14361322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/20371157/pexels-photo-20371157.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/20371157/pexels-photo-20371157.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26611714/pexels-photo-26611714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26725618/pexels-photo-26725618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8374310/pexels-photo-8374310.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/35563480/pexels-photo-35563480.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/28944816/pexels-photo-28944816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/16414856/pexels-photo-16414856.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/37904120/pexels-photo-37904120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/10628032/pexels-photo-10628032.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8369838/pexels-photo-8369838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/27118651/pexels-photo-27118651.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
