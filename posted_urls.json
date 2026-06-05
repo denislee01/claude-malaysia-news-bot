@@ -37,7 +37,8 @@
     "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5xbTNTMEhCT0U2N2xIOU0zQlZXZEJkWVNVTjFnU1hqUWVMZ2NNOTdHRUlxSWZJQlZiSnFONzZqVFR5M0ZCb3BDRGo4Q3lCLWJz?oc=5",
     "https://news.google.com/rss/articles/CBMiUEFVX3lxTE12M0M2dFpxNXAzRFFyQXdpV1U2Z3ZVaW1aRTVlcFByRUd6S3l6S0ptWnpiNjdZRHlfTUhHLTFEMk5yak15cGxvWTdFd1diX3pU?oc=5",
     "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUFdMU1VNNS1mU1RGeDVsRWFWeGszU19MX2xCeXZnMmRDajA4bm1DeVVLSzRYSWlGdlNqX3BOQ3pMQmJ1b08yMWM5c1hYYVBqVVZUT3E0MFNjWmN3TFQ3TTBCV3dNLUd5YzlHWVdselJ1eWNQWlBPMXR4LWYydHNHRDRtWlp1d0tHYVd2SHB5b1pFLUVOR3puZEZOWHlpd1lHVUUybUROR1JLRUk3V096Y2c4RGM?oc=5",
-    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNa1Y5UW5YVGZQWU5FYXJXZXA1ZnZqYUxoWnBUZTh2MmdRWENXV0ZXcXdXSThmcDNlbk8tWFVkM2RHbVBmUFdPc1FYM3hJV29ucEl2V3d3ZmhoUTg5MGNlTzFFQzhvYzhITURMQ2lNYjdpYXdsQlF5OG5rN1JtaW9BZHotUGlJSFJBMnh4LWllejl3eXVjQkJMeEZsN1k5YWJhLU9nSTRwQ3BURTF6Mmlodzh3eHowckE?oc=5"
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNa1Y5UW5YVGZQWU5FYXJXZXA1ZnZqYUxoWnBUZTh2MmdRWENXV0ZXcXdXSThmcDNlbk8tWFVkM2RHbVBmUFdPc1FYM3hJV29ucEl2V3d3ZmhoUTg5MGNlTzFFQzhvYzhITURMQ2lNYjdpYXdsQlF5OG5rN1JtaW9BZHotUGlJSFJBMnh4LWllejl3eXVjQkJMeEZsN1k5YWJhLU9nSTRwQ3BURTF6Mmlodzh3eHowckE?oc=5",
+    "https://github.com/anthropics/defending-code-reference-harness"
   ],
   "posts": [
     {
@@ -165,6 +166,12 @@
       "headline": "Data centre operator DayOne raises US$4.5 billion in Series C funding",
       "ig_post_id": "18163380622453284",
       "posted_at": "2026-06-05T11:55:58.292387+00:00"
+    },
+    {
+      "url": "https://github.com/anthropics/defending-code-reference-harness",
+      "headline": "Anthropic's open-source framework for AI-powered vulnerability discovery",
+      "ig_post_id": "18598632130017890",
+      "posted_at": "2026-06-05T19:22:55.322156+00:00"
     }
   ],
   "img_urls": [
@@ -327,6 +334,16 @@
     "https://images.pexels.com/photos/12503570/pexels-photo-12503570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/36122844/pexels-photo-36122844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/6538429/pexels-photo-6538429.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/37541793/pexels-photo-37541793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/37541793/pexels-photo-37541793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8539647/pexels-photo-8539647.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/17031597/pexels-photo-17031597.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/14297553/pexels-photo-14297553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/33219214/pexels-photo-33219214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/29708246/pexels-photo-29708246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/15949840/pexels-photo-15949840.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/12902858/pexels-photo-12902858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26725653/pexels-photo-26725653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://opengraph.githubassets.com/c31492cde456869521dae6db1b63e85c908c5ba5327255fedcfa177b64f77088/anthropics/defending-code-reference-harness",
+    "https://images.pexels.com/photos/5254996/pexels-photo-5254996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
