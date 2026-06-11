@@ -1,4 +1,5 @@
 """Track posted stories in posted_urls.json to avoid duplicates."""
+from __future__ import annotations
 import json
 from datetime import datetime, timezone
 from pathlib import Path

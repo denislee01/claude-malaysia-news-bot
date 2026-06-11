@@ -8,6 +8,8 @@ GitHub Actions runs this 2x/day automatically.
 import os
 import sys
 import argparse
+from dotenv import load_dotenv
+load_dotenv()
 from datetime import datetime, timezone
 
 import requests

@@ -1,4 +1,5 @@
 """Fetch carousel slide background images from Pexels API — free, real photos."""
+from __future__ import annotations
 import os
 import io
 import random
