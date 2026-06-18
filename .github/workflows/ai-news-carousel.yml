@@ -2,12 +2,9 @@ name: Malaysia AI News Carousel
 
 on:
   schedule:
-    - cron: '0 0 * * *'    # 8:00am MYT  — Morning post (primary)
-    - cron: '0 1 * * *'    # 9:00am MYT  — Morning retry 1
-    - cron: '0 2 * * *'    # 10:00am MYT — Morning retry 2
-    - cron: '30 10 * * *'  # 6:30pm MYT  — Evening post (primary)
-    - cron: '30 11 * * *'  # 7:30pm MYT  — Evening retry 1
-    - cron: '30 12 * * *'  # 8:30pm MYT  — Evening retry 2
+    - cron: '0 3 * * *'    # 11:00am MYT — Primary post
+    - cron: '30 3 * * *'   # 11:30am MYT — Retry 1
+    - cron: '0 4 * * *'    # 12:00pm MYT — Retry 2
   workflow_dispatch:
     inputs:
       dry_run:
