@@ -37,7 +37,11 @@ def _hours_since_last_ig_post() -> float:
         posts = data.get("data", [])
         if not posts:
             return 999.0
-        last_ts = datetime.fromisoformat(posts[0]["timestamp"].replace("Z", "+00:00"))
+        ts = posts[0]["timestamp"].replace("Z", "+00:00")
+        # IG returns +0000 (no colon); Python 3.9 fromisoformat needs +00:00
+        import re as _re
+        ts = _re.sub(r'([+-])(\d{2})(\d{2})$', r'\1\2:\3', ts)
+        last_ts = datetime.fromisoformat(ts)
         hours = (datetime.now(timezone.utc) - last_ts).total_seconds() / 3600
         print(f"[pipeline] IG API: last post was {hours:.1f}h ago")
         return hours
