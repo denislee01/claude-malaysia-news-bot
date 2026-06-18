@@ -3,9 +3,15 @@ import os
 import time
 import requests
 
-IMGBB_API_KEY = os.environ["IMGBB_API_KEY"]
-IG_USER_ID = os.environ["IG_USER_ID"]
-IG_ACCESS_TOKEN = os.environ["IG_ACCESS_TOKEN"]
+IMGBB_API_KEY = os.environ.get("IMGBB_API_KEY", "")
+IG_USER_ID = os.environ.get("IG_USER_ID", "")
+IG_ACCESS_TOKEN = os.environ.get("IG_ACCESS_TOKEN", "")
+
+if not all([IMGBB_API_KEY, IG_USER_ID, IG_ACCESS_TOKEN]):
+    import sys
+    missing = [k for k, v in {"IMGBB_API_KEY": IMGBB_API_KEY, "IG_USER_ID": IG_USER_ID, "IG_ACCESS_TOKEN": IG_ACCESS_TOKEN}.items() if not v]
+    print(f"[poster] ERROR: missing secrets: {missing}", file=sys.stderr)
+    sys.exit(1)
 GRAPH_BASE = "https://graph.instagram.com/v19.0"
 
 
