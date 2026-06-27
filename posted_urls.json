@@ -30,7 +30,8 @@
     "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQckwyMFN5X053ZGNCRFRnTFdPSGxPS0JfWGZMaVRwblRObjNucjdvdFUzQlQtcC1Ec2tXZEs5cXF0a2E2bVVacmV1WGJCdWp2T2pZQUpxNFg5VFEwRGNtbW5McHhoaVFwdDhqV1hsZENyV0JSRjFsVFVsSHoxNThsMlVrWVF1QWtxNGl3VHJWQmUtTTVVRk5xMmpCZlMyT1htY0ZJZGJpXzRrdnNkNlJxcUMyRHUxRDBQdlZwNTVLbHY?oc=5",
     "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQcklfcXN5OFpNd0t0ZHVMVjJLaVQ5SW1BVlFpZV9mSmJ6ZG01UklZY2g0MVlva09RV2R1eU1Ga05qZ3Ztbk95Y05jYkpWMzZFUndhbUs1M05JeWlHVUVONjNtYTJoUFZJM1NPTEl5MldlU2xsS0ZXWHdRR1ZIcURrZGxKanFUM0xqRTg5STBnYkR3RkpGRVlYbjZ5bUI1OEJwcHFmYjlvbjBQbktCT3hoOXRfYzBxZmNBZENDWW96WG1yY1REdVgzU21IMUJfdXZ2NmwwajBxVVVObFg1cU9sZDlSZWhZN05ucUlyaHBQVzhack5GaFR0RUNB0gH_AUFVX3lxTE1xSDh3WkVBcFZQUkltMFE0WWtrNjNIYXlWTnFuS1pYT0ktS3ZkWjhFYnJ1Q091c1ZPVE5lME4zaHlBQlU5cE1zdmk0S0xVTGFSaHQ1RWNUbVFzclBhQUZYakZLRTdfUkdFeTF3X0dzYm9yVXVUSDg1NDFvV1FBUS05ZGJSa2V2LWZGU3BwWDVrTGhIc1ZnYUFvMVY0bnRSV1J5RmpmbHhHd2F0VkgyM04tdkZ6WHl1RTQ1MmJLRjBDeUJTYXNNT3hDckhXdXh0bzNLSEh4RUFTMUpkZFRjVFpZX1hRakxvYklWYVJYY0pEcVNVWGJXSV9wTGxUN1dEZw?oc=5",
     "https://news.google.com/rss/articles/CBMiogFBVV95cUxORWxHcmotZkNzNEE0bllDdi1WTnYtVmN1bGRyTVYzQ2N2ZTNYakdlMjlBam5FdWJfYmgxSGxHaktRR2lSSFR6UkxuenRjMW1vZWoxUE1jR1VENHdwZk5YREhsOTVyUGpHYTNZWlp6bXFlX2dGalI0T1BJdU15cjdfdVNrS1NhbTM5dnBFNVh2Q1RHTEdUcWxuZDczejNYREMwdWc?oc=5",
-    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQb0lNNER3VTdCbW8zLWNTdzd5N3UwQWtqanZ4NUwzazgwOUthU25Jdk9mUUhVTFk0amF4NjRyTGRIX2t3b3lNV0ZuNm9DSjZUVGRjZDk1empwTVJCMkVpVUd4cjFNelNHWTBHcmh3VnRhamo3RkNJRE03b1Baa0FYVVBkSzRtcnRBRU90TW5OSGs2c192SjZGbkc2UGlrZEpDT2doM3Frc2poSHJCSEdLVUs4MHhNWkEt?oc=5"
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQb0lNNER3VTdCbW8zLWNTdzd5N3UwQWtqanZ4NUwzazgwOUthU25Jdk9mUUhVTFk0amF4NjRyTGRIX2t3b3lNV0ZuNm9DSjZUVGRjZDk1empwTVJCMkVpVUd4cjFNelNHWTBHcmh3VnRhamo3RkNJRE03b1Baa0FYVVBkSzRtcnRBRU90TW5OSGs2c192SjZGbkc2UGlrZEpDT2doM3Frc2poSHJCSEdLVUs4MHhNWkEt?oc=5",
+    "https://openai.com/index/previewing-gpt-5-6-sol/"
   ],
   "posts": [
     {
@@ -116,6 +117,12 @@
       "headline": "Malaysia tightens oversight of data centres to protect water, power resources",
       "ig_post_id": "18382033561163454",
       "posted_at": "2026-06-26T07:01:08.546222+00:00"
+    },
+    {
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "headline": "Previewing GPT\u20115.6 Sol: a next-generation model",
+      "ig_post_id": "18091064177374265",
+      "posted_at": "2026-06-27T06:35:13.359726+00:00"
     }
   ],
   "img_urls": [
@@ -207,6 +214,16 @@
     "https://images.pexels.com/photos/20957455/pexels-photo-20957455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/18999196/pexels-photo-18999196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/14353673/pexels-photo-14353673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/28260131/pexels-photo-28260131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/28260131/pexels-photo-28260131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/6120183/pexels-photo-6120183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/30268012/pexels-photo-30268012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/12899142/pexels-photo-12899142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26725606/pexels-photo-26725606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/31969131/pexels-photo-31969131.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/27118629/pexels-photo-27118629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/17879372/pexels-photo-17879372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/4252892/pexels-photo-4252892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/38162100/pexels-photo-38162100.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/37911158/pexels-photo-37911158.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
