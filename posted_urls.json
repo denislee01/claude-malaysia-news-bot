@@ -32,7 +32,8 @@
     "https://news.google.com/rss/articles/CBMiogFBVV95cUxORWxHcmotZkNzNEE0bllDdi1WTnYtVmN1bGRyTVYzQ2N2ZTNYakdlMjlBam5FdWJfYmgxSGxHaktRR2lSSFR6UkxuenRjMW1vZWoxUE1jR1VENHdwZk5YREhsOTVyUGpHYTNZWlp6bXFlX2dGalI0T1BJdU15cjdfdVNrS1NhbTM5dnBFNVh2Q1RHTEdUcWxuZDczejNYREMwdWc?oc=5",
     "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQb0lNNER3VTdCbW8zLWNTdzd5N3UwQWtqanZ4NUwzazgwOUthU25Jdk9mUUhVTFk0amF4NjRyTGRIX2t3b3lNV0ZuNm9DSjZUVGRjZDk1empwTVJCMkVpVUd4cjFNelNHWTBHcmh3VnRhamo3RkNJRE03b1Baa0FYVVBkSzRtcnRBRU90TW5OSGs2c192SjZGbkc2UGlrZEpDT2doM3Frc2poSHJCSEdLVUs4MHhNWkEt?oc=5",
     "https://openai.com/index/previewing-gpt-5-6-sol/",
-    "https://github.com/langchain-ai/langchain"
+    "https://github.com/langchain-ai/langchain",
+    "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/"
   ],
   "posts": [
     {
@@ -130,6 +131,12 @@
       "headline": "langchain-ai/langchain \u2014 The agent engineering platform.",
       "ig_post_id": "17951454564190933",
       "posted_at": "2026-06-28T07:08:11.091212+00:00"
+    },
+    {
+      "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
+      "headline": "GLM 5.2 beats Claude in our benchmarks",
+      "ig_post_id": "17888804340399071",
+      "posted_at": "2026-06-29T08:19:30.185844+00:00"
     }
   ],
   "img_urls": [
@@ -241,6 +248,16 @@
     "https://images.pexels.com/photos/27104040/pexels-photo-27104040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/12032987/pexels-photo-12032987.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/6532592/pexels-photo-6532592.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/36495824/pexels-photo-36495824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/36495824/pexels-photo-36495824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://semgrep.dev/assets/blog/glm-5.2-beats-claude-in-our-cybersecurity-benchmarks.png",
+    "https://images.pexels.com/photos/37862668/pexels-photo-37862668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/33006786/pexels-photo-33006786.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7972736/pexels-photo-7972736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26665323/pexels-photo-26665323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/18068746/pexels-photo-18068746.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/20693583/pexels-photo-20693583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7172645/pexels-photo-7172645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/14956303/pexels-photo-14956303.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26741124/pexels-photo-26741124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
