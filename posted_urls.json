@@ -34,7 +34,8 @@
     "https://openai.com/index/previewing-gpt-5-6-sol/",
     "https://github.com/langchain-ai/langchain",
     "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
-    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1pcUhySjlQbFVjbFk1MmlDQVpwMVQ2WTZldVEyRVBOVFhuOWpoZzdRWk5vMFc5T0ZRTXZRMGZHTjJqWmlrTTlMd3Q3eFQ0RE9mb25PYV8yamlJemtqNHZHUVBDOUlGQ1ZYUkhTZzR1b1dzSGJzM1E?oc=5"
+    "https://news.google.com/rss/articles/CBMidkFVX3lxTE1pcUhySjlQbFVjbFk1MmlDQVpwMVQ2WTZldVEyRVBOVFhuOWpoZzdRWk5vMFc5T0ZRTXZRMGZHTjJqWmlrTTlMd3Q3eFQ0RE9mb25PYV8yamlJemtqNHZHUVBDOUlGQ1ZYUkhTZzR1b1dzSGJzM1E?oc=5",
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA1SmJiMVFaZmJ0OFhScVdtcEQ2bk5lNGYxVlRSZmpvb0VQbVpFV243UmhyOGtsd19fUjZmcDRSRk9CZXl4d2xSODViOWlWMWcx?oc=5"
   ],
   "posts": [
     {
@@ -144,6 +145,12 @@
       "headline": "Malaysia's SRKK AI Sets 2026 IPO Record with 312.3-Times Oversubscription Ahead ",
       "ig_post_id": "18097584901951085",
       "posted_at": "2026-06-30T07:01:50.663694+00:00"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA1SmJiMVFaZmJ0OFhScVdtcEQ2bk5lNGYxVlRSZmpvb0VQbVpFV243UmhyOGtsd19fUjZmcDRSRk9CZXl4d2xSODViOWlWMWcx?oc=5",
+      "headline": "Vertiv opens Malaysia plant to meet AI data centres\u2019 power needs",
+      "ig_post_id": "18050874647552024",
+      "posted_at": "2026-07-01T07:18:09.228635+00:00"
     }
   ],
   "img_urls": [
@@ -275,6 +282,16 @@
     "https://images.pexels.com/photos/14361323/pexels-photo-14361323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/27118612/pexels-photo-27118612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/34006781/pexels-photo-34006781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/36402172/pexels-photo-36402172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/36402172/pexels-photo-36402172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/37547055/pexels-photo-37547055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/12903097/pexels-photo-12903097.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26665327/pexels-photo-26665327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/6451559/pexels-photo-6451559.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/35514476/pexels-photo-35514476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/36012993/pexels-photo-36012993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/3321795/pexels-photo-3321795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/10490664/pexels-photo-10490664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/17438099/pexels-photo-17438099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/29442951/pexels-photo-29442951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
