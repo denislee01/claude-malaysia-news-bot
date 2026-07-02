@@ -35,7 +35,8 @@
     "https://github.com/langchain-ai/langchain",
     "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
     "https://news.google.com/rss/articles/CBMidkFVX3lxTE1pcUhySjlQbFVjbFk1MmlDQVpwMVQ2WTZldVEyRVBOVFhuOWpoZzdRWk5vMFc5T0ZRTXZRMGZHTjJqWmlrTTlMd3Q3eFQ0RE9mb25PYV8yamlJemtqNHZHUVBDOUlGQ1ZYUkhTZzR1b1dzSGJzM1E?oc=5",
-    "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA1SmJiMVFaZmJ0OFhScVdtcEQ2bk5lNGYxVlRSZmpvb0VQbVpFV243UmhyOGtsd19fUjZmcDRSRk9CZXl4d2xSODViOWlWMWcx?oc=5"
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA1SmJiMVFaZmJ0OFhScVdtcEQ2bk5lNGYxVlRSZmpvb0VQbVpFV243UmhyOGtsd19fUjZmcDRSRk9CZXl4d2xSODViOWlWMWcx?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSWFkWERFLWlfMTg4SlU1MnktMWFKRVBXN241Y1hLTXBCaGhOTkxqOHZBQThHaEtzWEZ2aHRGZWFLdF9Td2d5bzNUN2UtaWJJMld2alo5QVZJQUJGQzF5YUotTVVQN1NMV2xidGZ0NTVldVlzbEo2NXgxd2x1NHI1QUMzX0lfS1RyXzRWTnlPV0x6SU9pclNwMjVodlRiRmFmeldrSUs0NmdBRU54ei13bjN0V0V5MkFiSHc?oc=5"
   ],
   "posts": [
     {
@@ -151,6 +152,12 @@
       "headline": "Vertiv opens Malaysia plant to meet AI data centres\u2019 power needs",
       "ig_post_id": "18050874647552024",
       "posted_at": "2026-07-01T07:18:09.228635+00:00"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQSWFkWERFLWlfMTg4SlU1MnktMWFKRVBXN241Y1hLTXBCaGhOTkxqOHZBQThHaEtzWEZ2aHRGZWFLdF9Td2d5bzNUN2UtaWJJMld2alo5QVZJQUJGQzF5YUotTVVQN1NMV2xidGZ0NTVldVlzbEo2NXgxd2x1NHI1QUMzX0lfS1RyXzRWTnlPV0x6SU9pclNwMjVodlRiRmFmeldrSUs0NmdBRU54ei13bjN0V0V5MkFiSHc?oc=5",
+      "headline": "Malaysia\u2019s data centre backlash is loud, popular and wrong",
+      "ig_post_id": "18168438820437992",
+      "posted_at": "2026-07-02T06:57:46.205001+00:00"
     }
   ],
   "img_urls": [
@@ -292,6 +299,16 @@
     "https://images.pexels.com/photos/3321795/pexels-photo-3321795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/10490664/pexels-photo-10490664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/17438099/pexels-photo-17438099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/29442951/pexels-photo-29442951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/29442951/pexels-photo-29442951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/28293343/pexels-photo-28293343.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7876388/pexels-photo-7876388.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/18460006/pexels-photo-18460006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7663293/pexels-photo-7663293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/5473879/pexels-photo-5473879.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/19850260/pexels-photo-19850260.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/31840437/pexels-photo-31840437.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/4062992/pexels-photo-4062992.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/12742047/pexels-photo-12742047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/24195621/pexels-photo-24195621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
