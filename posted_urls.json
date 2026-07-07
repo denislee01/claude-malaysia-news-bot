@@ -40,7 +40,8 @@
     "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSGpwRjBpalRYWmZqMExRTHBrU192alE3QkpNdTZ5QnQyclVrSzhVWkhORjFzZjc4d21UM2o4a2ZoU0d3SW1WRVFXbUoyajR3NkR6YjBHQU9mZTNhWXAtYjB4TVV2TFVIeG1BbUtiNUFuUmE5U0pmQlpBZWlEQWVBZ0tTUm5wcFZSNEVMQlptUVB6YnR3dXc3emNWR1E2bThjM0JOWDhvamFBLVNwQ25qa1lsWE1xcGRZS0lQYXZReUY1aEJOc0E?oc=5",
     "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPR2lqS0QwMzlOVFFsblFsYi0ta1BKcWp3UGI3STdJUDdjSVFkdkpBUDZFVE41NmJHMnViUjIzZlNHS0l4cVRNb1NiRFRseFhsNktJREN2cWg5VXhKdTdqWTFoRVBXY0ZjLU9DMTQ1M3RIV1lEUEFhUXdVc1B6M2djanhMVm5OVF9ZaVZzVFpycDJKci04YVdGU1IzMmhLWUo1Q0FBdVdILVVQU09OOW9jeThRMmxjM0RLeWZ3?oc=5",
     "https://github.com/baserow/baserow",
-    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPd08wakdTLV9KZHNaYkEzcm13d2NHOGs5dGpnbk9SUXE2SjVrV2EzZ2RIN2dlcUE5OGhrZlRkSkJWUVR1V2VZc0tqRVZ0U0tZV1pWSGh3UUJuWGE4N1RBWk5mamJuUXgyUzNOeWpUanBuX0lMTEtlTWtkai13UElMYzBPamxhTXNJOW52djRkWno4QW0yc3JTVE5hVFZxbXlOSXg3TUlQOW4xdVZST05zVERBRUFMcGxpT1JocmlJNUhrTWNxZFplQw?oc=5"
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPd08wakdTLV9KZHNaYkEzcm13d2NHOGs5dGpnbk9SUXE2SjVrV2EzZ2RIN2dlcUE5OGhrZlRkSkJWUVR1V2VZc0tqRVZ0U0tZV1pWSGh3UUJuWGE4N1RBWk5mamJuUXgyUzNOeWpUanBuX0lMTEtlTWtkai13UElMYzBPamxhTXNJOW52djRkWno4QW0yc3JTVE5hVFZxbXlOSXg3TUlQOW4xdVZST05zVERBRUFMcGxpT1JocmlJNUhrTWNxZFplQw?oc=5",
+    "https://github.com/microsoft/qlib"
   ],
   "posts": [
     {
@@ -186,6 +187,12 @@
       "headline": "Johor tops Malaysia's state economies with 8% growth, powered by data centres an",
       "ig_post_id": "17889501129397466",
       "posted_at": "2026-07-06T07:19:02.560185+00:00"
+    },
+    {
+      "url": "https://github.com/microsoft/qlib",
+      "headline": "microsoft/qlib \u2014 Qlib is an AI-oriented Quant investment platform that aims to u",
+      "ig_post_id": "17971397478085056",
+      "posted_at": "2026-07-07T06:53:27.744437+00:00"
     }
   ],
   "img_urls": [
@@ -377,6 +384,16 @@
     "https://images.pexels.com/photos/2927538/pexels-photo-2927538.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/8451180/pexels-photo-8451180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/17924582/pexels-photo-17924582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/10451136/pexels-photo-10451136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/10451136/pexels-photo-10451136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/37120840/pexels-photo-37120840.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/15061853/pexels-photo-15061853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/5583964/pexels-photo-5583964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/33621476/pexels-photo-33621476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/27118620/pexels-photo-27118620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/36522032/pexels-photo-36522032.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://opengraph.githubassets.com/07f08926b582e2f9e786d0a9c0fafa72afd7329e02e67ec61ab1dd096c4441a2/microsoft/qlib",
+    "https://images.pexels.com/photos/5496463/pexels-photo-5496463.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/12495616/pexels-photo-12495616.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/29596314/pexels-photo-29596314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
