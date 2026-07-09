@@ -42,7 +42,8 @@
     "https://github.com/baserow/baserow",
     "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPd08wakdTLV9KZHNaYkEzcm13d2NHOGs5dGpnbk9SUXE2SjVrV2EzZ2RIN2dlcUE5OGhrZlRkSkJWUVR1V2VZc0tqRVZ0U0tZV1pWSGh3UUJuWGE4N1RBWk5mamJuUXgyUzNOeWpUanBuX0lMTEtlTWtkai13UElMYzBPamxhTXNJOW52djRkWno4QW0yc3JTVE5hVFZxbXlOSXg3TUlQOW4xdVZST05zVERBRUFMcGxpT1JocmlJNUhrTWNxZFplQw?oc=5",
     "https://github.com/microsoft/qlib",
-    "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRFRZOWh0UlloaFFocFNTV0NDcER6YlRSQXVkVGk3MFRrdTVaTU5LdjRzTzhWVHpNOGVVRkp1WXhnYU1ad2VwajNZazlaZmJEOXRNNUN0Z1RuekJlaDc1bDlvY1gxQXNQT0VQU2JlYzVhWTM2OXB0dDZadmlQcHNOMG83S3ZqbE9tOGVJOXNxNXM4akNNQUVySnpzVUhZcDJ6RW9fWFN5UjFrc1BPNXBIblJQa3AzN1NZLXBQUWViQzczNXZBdm9FUFhtcXBZRnA0RHAtTjllMzVQMTctOFE?oc=5"
+    "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRFRZOWh0UlloaFFocFNTV0NDcER6YlRSQXVkVGk3MFRrdTVaTU5LdjRzTzhWVHpNOGVVRkp1WXhnYU1ad2VwajNZazlaZmJEOXRNNUN0Z1RuekJlaDc1bDlvY1gxQXNQT0VQU2JlYzVhWTM2OXB0dDZadmlQcHNOMG83S3ZqbE9tOGVJOXNxNXM4akNNQUVySnpzVUhZcDJ6RW9fWFN5UjFrc1BPNXBIblJQa3AzN1NZLXBQUWViQzczNXZBdm9FUFhtcXBZRnA0RHAtTjllMzVQMTctOFE?oc=5",
+    "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5EOW1jWldxaURTN3lVNVFFUFV0X2JHX3drSHJhTmJGQ0JPLXhPdFpaRzItcWtGM3hnTlNWWFlwQzlEQ1RucXFFNFJzT18yV21GazNxM1FhR0M?oc=5"
   ],
   "posts": [
     {
@@ -200,6 +201,12 @@
       "headline": "AI Transformation in Southeast Asia: AirAsia and TNB Lead Enterprise Innovation ",
       "ig_post_id": "18070746779401054",
       "posted_at": "2026-07-08T05:58:30.917892+00:00"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5EOW1jWldxaURTN3lVNVFFUFV0X2JHX3drSHJhTmJGQ0JPLXhPdFpaRzItcWtGM3hnTlNWWFlwQzlEQ1RucXFFNFJzT18yV21GazNxM1FhR0M?oc=5",
+      "headline": "BNM Governor Says Banks Must Keep Humans Accountable for AI Decisions",
+      "ig_post_id": "18134451049538723",
+      "posted_at": "2026-07-09T06:52:02.959238+00:00"
     }
   ],
   "img_urls": [
@@ -411,6 +418,16 @@
     "https://images.pexels.com/photos/31178859/pexels-photo-31178859.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/26725655/pexels-photo-26725655.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/10675505/pexels-photo-10675505.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/12903157/pexels-photo-12903157.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/12903157/pexels-photo-12903157.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7688592/pexels-photo-7688592.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/37521063/pexels-photo-37521063.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/10984746/pexels-photo-10984746.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/18093475/pexels-photo-18093475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26665348/pexels-photo-26665348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/27816736/pexels-photo-27816736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/18068728/pexels-photo-18068728.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/34936110/pexels-photo-34936110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/2189518/pexels-photo-2189518.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/30094799/pexels-photo-30094799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
