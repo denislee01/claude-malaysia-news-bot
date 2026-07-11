@@ -44,7 +44,8 @@
     "https://github.com/microsoft/qlib",
     "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRFRZOWh0UlloaFFocFNTV0NDcER6YlRSQXVkVGk3MFRrdTVaTU5LdjRzTzhWVHpNOGVVRkp1WXhnYU1ad2VwajNZazlaZmJEOXRNNUN0Z1RuekJlaDc1bDlvY1gxQXNQT0VQU2JlYzVhWTM2OXB0dDZadmlQcHNOMG83S3ZqbE9tOGVJOXNxNXM4akNNQUVySnpzVUhZcDJ6RW9fWFN5UjFrc1BPNXBIblJQa3AzN1NZLXBQUWViQzczNXZBdm9FUFhtcXBZRnA0RHAtTjllMzVQMTctOFE?oc=5",
     "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5EOW1jWldxaURTN3lVNVFFUFV0X2JHX3drSHJhTmJGQ0JPLXhPdFpaRzItcWtGM3hnTlNWWFlwQzlEQ1RucXFFNFJzT18yV21GazNxM1FhR0M?oc=5",
-    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVUYzaFdWN3pYLXRybThMalpfby1Fd3ZBZE9CRldNXzA1QkM2QjBLTFlPU194XzB4bEcya2E5Z1NtR2V1WXNVbkliOVh4OHEydDNxclUwVFBMSHhfSktMdXh2bmlTVk5nTGZaMm9lQzV0Q1VCcFFuZDlRVEZjZnBPbXFnNDdKTFV1cjJkay1aSHVjR3lXWmw1WXRSNWV5UFdtSXFwRWtRaGViLWc?oc=5"
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVUYzaFdWN3pYLXRybThMalpfby1Fd3ZBZE9CRldNXzA1QkM2QjBLTFlPU194XzB4bEcya2E5Z1NtR2V1WXNVbkliOVh4OHEydDNxclUwVFBMSHhfSktMdXh2bmlTVk5nTGZaMm9lQzV0Q1VCcFFuZDlRVEZjZnBPbXFnNDdKTFV1cjJkay1aSHVjR3lXWmw1WXRSNWV5UFdtSXFwRWtRaGViLWc?oc=5",
+    "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/"
   ],
   "posts": [
     {
@@ -214,6 +215,12 @@
       "headline": "Malaysia PM Anwar to debut an AI double that sounds just like him",
       "ig_post_id": "18079709576444751",
       "posted_at": "2026-07-10T06:52:08.950754+00:00"
+    },
+    {
+      "url": "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/",
+      "headline": "Apple sues OpenAI, accuses ex-employees of stealing trade secrets",
+      "ig_post_id": "18073910546695044",
+      "posted_at": "2026-07-11T05:46:57.187501+00:00"
     }
   ],
   "img_urls": [
@@ -445,6 +452,16 @@
     "https://images.pexels.com/photos/36138120/pexels-photo-36138120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/8132756/pexels-photo-8132756.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/15627898/pexels-photo-15627898.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/25630341/pexels-photo-25630341.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/25630341/pexels-photo-25630341.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/10519598/pexels-photo-10519598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/38319432/pexels-photo-38319432.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/36003570/pexels-photo-36003570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7942498/pexels-photo-7942498.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/30879846/pexels-photo-30879846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2026/05/apple-openai.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+    "https://images.pexels.com/photos/36289607/pexels-photo-36289607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/12902872/pexels-photo-12902872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/35908069/pexels-photo-35908069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/12912180/pexels-photo-12912180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
