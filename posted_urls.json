@@ -45,7 +45,8 @@
     "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRFRZOWh0UlloaFFocFNTV0NDcER6YlRSQXVkVGk3MFRrdTVaTU5LdjRzTzhWVHpNOGVVRkp1WXhnYU1ad2VwajNZazlaZmJEOXRNNUN0Z1RuekJlaDc1bDlvY1gxQXNQT0VQU2JlYzVhWTM2OXB0dDZadmlQcHNOMG83S3ZqbE9tOGVJOXNxNXM4akNNQUVySnpzVUhZcDJ6RW9fWFN5UjFrc1BPNXBIblJQa3AzN1NZLXBQUWViQzczNXZBdm9FUFhtcXBZRnA0RHAtTjllMzVQMTctOFE?oc=5",
     "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5EOW1jWldxaURTN3lVNVFFUFV0X2JHX3drSHJhTmJGQ0JPLXhPdFpaRzItcWtGM3hnTlNWWFlwQzlEQ1RucXFFNFJzT18yV21GazNxM1FhR0M?oc=5",
     "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVUYzaFdWN3pYLXRybThMalpfby1Fd3ZBZE9CRldNXzA1QkM2QjBLTFlPU194XzB4bEcya2E5Z1NtR2V1WXNVbkliOVh4OHEydDNxclUwVFBMSHhfSktMdXh2bmlTVk5nTGZaMm9lQzV0Q1VCcFFuZDlRVEZjZnBPbXFnNDdKTFV1cjJkay1aSHVjR3lXWmw1WXRSNWV5UFdtSXFwRWtRaGViLWc?oc=5",
-    "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/"
+    "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/",
+    "https://github.com/Dao-AILab/flash-attention"
   ],
   "posts": [
     {
@@ -221,6 +222,12 @@
       "headline": "Apple sues OpenAI, accuses ex-employees of stealing trade secrets",
       "ig_post_id": "18073910546695044",
       "posted_at": "2026-07-11T05:46:57.187501+00:00"
+    },
+    {
+      "url": "https://github.com/Dao-AILab/flash-attention",
+      "headline": "Dao-AILab/flash-attention \u2014 Fast and memory-efficient exact attention",
+      "ig_post_id": "18452852785142707",
+      "posted_at": "2026-07-12T06:10:20.110848+00:00"
     }
   ],
   "img_urls": [
@@ -462,6 +469,16 @@
     "https://images.pexels.com/photos/36289607/pexels-photo-36289607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/12902872/pexels-photo-12902872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/35908069/pexels-photo-35908069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/12912180/pexels-photo-12912180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/12912180/pexels-photo-12912180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/12662817/pexels-photo-12662817.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/20433751/pexels-photo-20433751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8851374/pexels-photo-8851374.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26632427/pexels-photo-26632427.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/14780959/pexels-photo-14780959.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/38429747/pexels-photo-38429747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/29645142/pexels-photo-29645142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/33798620/pexels-photo-33798620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/27118627/pexels-photo-27118627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://opengraph.githubassets.com/64cc0149aff05ab2bf25b0422b5c7b76ed41db181962f705222e0d9f5692fdc3/Dao-AILab/flash-attention"
   ]
 }
