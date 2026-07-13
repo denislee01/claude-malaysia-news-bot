@@ -46,7 +46,8 @@
     "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5EOW1jWldxaURTN3lVNVFFUFV0X2JHX3drSHJhTmJGQ0JPLXhPdFpaRzItcWtGM3hnTlNWWFlwQzlEQ1RucXFFNFJzT18yV21GazNxM1FhR0M?oc=5",
     "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVUYzaFdWN3pYLXRybThMalpfby1Fd3ZBZE9CRldNXzA1QkM2QjBLTFlPU194XzB4bEcya2E5Z1NtR2V1WXNVbkliOVh4OHEydDNxclUwVFBMSHhfSktMdXh2bmlTVk5nTGZaMm9lQzV0Q1VCcFFuZDlRVEZjZnBPbXFnNDdKTFV1cjJkay1aSHVjR3lXWmw1WXRSNWV5UFdtSXFwRWtRaGViLWc?oc=5",
     "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/",
-    "https://github.com/Dao-AILab/flash-attention"
+    "https://github.com/Dao-AILab/flash-attention",
+    "https://news.google.com/rss/articles/CBMiYEFVX3lxTE55dGtDRmVuYjZaWXdSaTdjRjEycW9jTWJNd1IxLUkxbUppQ3NWT194TlRiRjdUZ0gxV2gtTGNaZEZEVVhwNjFiM2c3ME1DSG5GOS0wTEs4UEt1azNXd0ItRw?oc=5"
   ],
   "posts": [
     {
@@ -228,6 +229,12 @@
       "headline": "Dao-AILab/flash-attention \u2014 Fast and memory-efficient exact attention",
       "ig_post_id": "18452852785142707",
       "posted_at": "2026-07-12T06:10:20.110848+00:00"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE55dGtDRmVuYjZaWXdSaTdjRjEycW9jTWJNd1IxLUkxbUppQ3NWT194TlRiRjdUZ0gxV2gtTGNaZEZEVVhwNjFiM2c3ME1DSG5GOS0wTEs4UEt1azNXd0ItRw?oc=5",
+      "headline": "Most Malaysian Banks Use AI but Few Have Reached Scale, AICB Report Finds",
+      "ig_post_id": "17891052231588612",
+      "posted_at": "2026-07-13T06:26:04.021298+00:00"
     }
   ],
   "img_urls": [
@@ -479,6 +486,16 @@
     "https://images.pexels.com/photos/29645142/pexels-photo-29645142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/33798620/pexels-photo-33798620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/27118627/pexels-photo-27118627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://opengraph.githubassets.com/64cc0149aff05ab2bf25b0422b5c7b76ed41db181962f705222e0d9f5692fdc3/Dao-AILab/flash-attention"
+    "https://opengraph.githubassets.com/64cc0149aff05ab2bf25b0422b5c7b76ed41db181962f705222e0d9f5692fdc3/Dao-AILab/flash-attention",
+    "https://images.pexels.com/photos/35033961/pexels-photo-35033961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8108729/pexels-photo-8108729.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8680284/pexels-photo-8680284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8067863/pexels-photo-8067863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8354516/pexels-photo-8354516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/26631314/pexels-photo-26631314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/30853010/pexels-photo-30853010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/27088175/pexels-photo-27088175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7653566/pexels-photo-7653566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/38136631/pexels-photo-38136631.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
