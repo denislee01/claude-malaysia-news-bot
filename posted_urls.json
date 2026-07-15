@@ -48,7 +48,8 @@
     "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/",
     "https://github.com/Dao-AILab/flash-attention",
     "https://news.google.com/rss/articles/CBMiYEFVX3lxTE55dGtDRmVuYjZaWXdSaTdjRjEycW9jTWJNd1IxLUkxbUppQ3NWT194TlRiRjdUZ0gxV2gtTGNaZEZEVVhwNjFiM2c3ME1DSG5GOS0wTEs4UEt1azNXd0ItRw?oc=5",
-    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVU5RRFphc3VtdGg5ZFF6VUo2MnVSZng2b1NwZTZOMTlxaWxPcVR3RGR0S0N6LVNXYzAyNUxELW1NYVBJYmFtRkpOcGtZc1d5QXhfS2dvaHRrcEVEb1dKSnhNQnZMcS1sX1RVd0MxNU1JREVDSkhySW40U0FVeDlHeDZWc1Q2S29kczBjVHlFdkF2eTVxZG16YTJOTk5CQ2szTmFRN3BkUHdVZkZVcTNERVZzMHhmMHpDTG1lSTRXWGVEY19i?oc=5"
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVU5RRFphc3VtdGg5ZFF6VUo2MnVSZng2b1NwZTZOMTlxaWxPcVR3RGR0S0N6LVNXYzAyNUxELW1NYVBJYmFtRkpOcGtZc1d5QXhfS2dvaHRrcEVEb1dKSnhNQnZMcS1sX1RVd0MxNU1JREVDSkhySW40U0FVeDlHeDZWc1Q2S29kczBjVHlFdkF2eTVxZG16YTJOTk5CQ2szTmFRN3BkUHdVZkZVcTNERVZzMHhmMHpDTG1lSTRXWGVEY19i?oc=5",
+    "https://prismml.com/news/bonsai-27b"
   ],
   "posts": [
     {
@@ -242,6 +243,12 @@
       "headline": "Malaysia launches Korea-Asean Digital Academy to strengthen AI talent developmen",
       "ig_post_id": "18125754526665406",
       "posted_at": "2026-07-14T05:37:37.297499+00:00"
+    },
+    {
+      "url": "https://prismml.com/news/bonsai-27b",
+      "headline": "Bonsai 27B: A 27B-Class model that runs on a phone",
+      "ig_post_id": "17885328570605549",
+      "posted_at": "2026-07-15T05:38:58.387566+00:00"
     }
   ],
   "img_urls": [
@@ -513,6 +520,16 @@
     "https://images.pexels.com/photos/33996968/pexels-photo-33996968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/31070336/pexels-photo-31070336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/35930290/pexels-photo-35930290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/26665350/pexels-photo-26665350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/26665350/pexels-photo-26665350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7828706/pexels-photo-7828706.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/38281109/pexels-photo-38281109.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/38543681/pexels-photo-38543681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/10295936/pexels-photo-10295936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/5982369/pexels-photo-5982369.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/8946902/pexels-photo-8946902.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/32141311/pexels-photo-32141311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/35848720/pexels-photo-35848720.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/6016688/pexels-photo-6016688.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/5475809/pexels-photo-5475809.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
