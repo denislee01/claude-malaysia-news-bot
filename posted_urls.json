@@ -51,7 +51,8 @@
     "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVU5RRFphc3VtdGg5ZFF6VUo2MnVSZng2b1NwZTZOMTlxaWxPcVR3RGR0S0N6LVNXYzAyNUxELW1NYVBJYmFtRkpOcGtZc1d5QXhfS2dvaHRrcEVEb1dKSnhNQnZMcS1sX1RVd0MxNU1JREVDSkhySW40U0FVeDlHeDZWc1Q2S29kczBjVHlFdkF2eTVxZG16YTJOTk5CQ2szTmFRN3BkUHdVZkZVcTNERVZzMHhmMHpDTG1lSTRXWGVEY19i?oc=5",
     "https://prismml.com/news/bonsai-27b",
     "https://news.google.com/rss/articles/CBMiigFBVV95cUxNQTdBVFl5WDVoQnFCUkUyS0ZHQURpRkxaYndmSmxUejFlbzY1OVJTbV82blBRUWdhdjNsajRxaHktZkZscldYaFRlTzFvWnBsR1R1elRMNkdVUUJNNWcyQ2dEc29PQTZSdlI0VW1INUtGZm9uV3pBdXlIS0lDcGJ3ZlB2OHlkZjlpQ0E?oc=5",
-    "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZ2NKaVpfMkRWWUJDMUMyTnNIVU5DeDdmcVJJd0wyU09SRUFzX2Q0WUxwSzhYcWoyM0lPM1FlbWF0NUI2YmliZ1g5dlR4Z2RWbUVMNE5LcnRPZ1dlWGd6STczUmFCMi1wTnpGWmFQeFhWajlYc3hjR3NSQ19IcVlnZzR4X0I1dXphVGFfNUZZX2pKNFU?oc=5"
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZ2NKaVpfMkRWWUJDMUMyTnNIVU5DeDdmcVJJd0wyU09SRUFzX2Q0WUxwSzhYcWoyM0lPM1FlbWF0NUI2YmliZ1g5dlR4Z2RWbUVMNE5LcnRPZ1dlWGd6STczUmFCMi1wTnpGWmFQeFhWajlYc3hjR3NSQ19IcVlnZzR4X0I1dXphVGFfNUZZX2pKNFU?oc=5",
+    "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/"
   ],
   "posts": [
     {
@@ -263,6 +264,12 @@
       "headline": "Keeping pace with AI threats",
       "ig_post_id": "18215413495337545",
       "posted_at": "2026-07-18T05:33:12.117265+00:00"
+    },
+    {
+      "url": "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/",
+      "headline": "GPT-5.6 used a prompt to close a 30-year gap in convex optimization",
+      "ig_post_id": "17881518141611500",
+      "posted_at": "2026-07-19T05:59:51.222655+00:00"
     }
   ],
   "img_urls": [
@@ -564,6 +571,16 @@
     "https://images.pexels.com/photos/30675560/pexels-photo-30675560.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/11749459/pexels-photo-11749459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/37634460/pexels-photo-37634460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/7948029/pexels-photo-7948029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/7948029/pexels-photo-7948029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/35677818/pexels-photo-35677818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/27118609/pexels-photo-27118609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/28624225/pexels-photo-28624225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/38625373/pexels-photo-38625373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/35776404/pexels-photo-35776404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/16094057/pexels-photo-16094057.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/17709307/pexels-photo-17709307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/10285684/pexels-photo-10285684.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/31947023/pexels-photo-31947023.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/10628029/pexels-photo-10628029.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
