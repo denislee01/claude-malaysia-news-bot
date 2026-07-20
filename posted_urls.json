@@ -52,7 +52,8 @@
     "https://prismml.com/news/bonsai-27b",
     "https://news.google.com/rss/articles/CBMiigFBVV95cUxNQTdBVFl5WDVoQnFCUkUyS0ZHQURpRkxaYndmSmxUejFlbzY1OVJTbV82blBRUWdhdjNsajRxaHktZkZscldYaFRlTzFvWnBsR1R1elRMNkdVUUJNNWcyQ2dEc29PQTZSdlI0VW1INUtGZm9uV3pBdXlIS0lDcGJ3ZlB2OHlkZjlpQ0E?oc=5",
     "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZ2NKaVpfMkRWWUJDMUMyTnNIVU5DeDdmcVJJd0wyU09SRUFzX2Q0WUxwSzhYcWoyM0lPM1FlbWF0NUI2YmliZ1g5dlR4Z2RWbUVMNE5LcnRPZ1dlWGd6STczUmFCMi1wTnpGWmFQeFhWajlYc3hjR3NSQ19IcVlnZzR4X0I1dXphVGFfNUZZX2pKNFU?oc=5",
-    "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/"
+    "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxOTVhvU3F3RTIzVjcwd01qTTFETURwVzhoTmx6bXFsN3V1MzlvOWFvRG9MWTNJcl9GelJQc3lCN1hDS0lpUHllekVDUF9fR1h4bGJaS2RTbzFHNUQ4bmRZRXdBWDdsanNxaFhRZ2dIRTh0WXVxemVYVFRJR0d6enBtQ2NRcHczazd0eGh3ZkRyYTdiYW4wSzBYMks4ekdWT1ljd0VJS3czdlM5eTJ0Ni02dmdFQ18wdw?oc=5"
   ],
   "posts": [
     {
@@ -270,6 +271,12 @@
       "headline": "GPT-5.6 used a prompt to close a 30-year gap in convex optimization",
       "ig_post_id": "17881518141611500",
       "posted_at": "2026-07-19T05:59:51.222655+00:00"
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOTVhvU3F3RTIzVjcwd01qTTFETURwVzhoTmx6bXFsN3V1MzlvOWFvRG9MWTNJcl9GelJQc3lCN1hDS0lpUHllekVDUF9fR1h4bGJaS2RTbzFHNUQ4bmRZRXdBWDdsanNxaFhRZ2dIRTh0WXVxemVYVFRJR0d6enBtQ2NRcHczazd0eGh3ZkRyYTdiYW4wSzBYMks4ekdWT1ljd0VJS3czdlM5eTJ0Ni02dmdFQ18wdw?oc=5",
+      "headline": "Why Malaysia\u2019s AI future depends on building capability",
+      "ig_post_id": "18113064587488541",
+      "posted_at": "2026-07-20T06:24:24.336124+00:00"
     }
   ],
   "img_urls": [
@@ -581,6 +588,16 @@
     "https://images.pexels.com/photos/17709307/pexels-photo-17709307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/10285684/pexels-photo-10285684.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "https://images.pexels.com/photos/31947023/pexels-photo-31947023.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://images.pexels.com/photos/10628029/pexels-photo-10628029.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    "https://images.pexels.com/photos/10628029/pexels-photo-10628029.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/18781244/pexels-photo-18781244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/38319426/pexels-photo-38319426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/9083750/pexels-photo-9083750.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/29284331/pexels-photo-29284331.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/4106805/pexels-photo-4106805.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/6638883/pexels-photo-6638883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/7567217/pexels-photo-7567217.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/27771828/pexels-photo-27771828.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/35140700/pexels-photo-35140700.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/15055111/pexels-photo-15055111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   ]
 }
